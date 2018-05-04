@@ -1,0 +1,47 @@
+{
+  "name": "devster",
+  "version": "1.0.0",
+  "description": "Web page development using gulp, sass, and nunjucks",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io.git"
+  },
+  "keywords": [
+    "web",
+    "gulp",
+    "sass",
+    "nunjucks"
+  ],
+  "author": "Patrick Petrushonis <pwp904@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io/issues"
+  },
+  "homepage": "https://github.com/PatrickPetrushonis/patrickpetrushonis.github.io#readme",
+  "devDependencies": {},
+  "false": {},
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "fsevents": "^1.1.2",
+    "graceful-fs": "^4.1.11",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-data": "^1.2.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-include": "^2.3.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "minimatch": "^3.0.4",
+    "run-sequence": "^2.1.0"
+  }
+}
