@@ -11,8 +11,9 @@ input[type="reset"],
 	height: 44px;
 	line-height: 44px;
 
-	background: transparent;
-	border: solid 1px color(mono, white);
+	background: color(primary, light);
+	border: solid 1px color(primary, dark);
+	box-shadow: 1px 2px 4px 1px color(gray, dark);
 	color: color(mono, white);
 	cursor: pointer;
 
@@ -28,8 +29,9 @@ input[type="reset"],
 
 	&:hover {
 		background: color(mono, white);
-		border-color: color(mono, white);
-		color: color(primary, red);
+		border-color: color(primary, light);
+		box-shadow: none;
+		color: color(primary, light);
 	}
 
 	&.button--alternate {
@@ -44,12 +46,12 @@ input[type="reset"],
 	}
 
 	&.button--attention {
-		background: color(primary, red);
-		border-color: color(primary, red);
+		background: color(primary, light);
+		border-color: color(primary, light);
 
 		&:hover {
-			background: darken(color(primary, red), 10);
-			border-color: darken(color(primary, red), 10);
+			background: darken(color(primary, light), 10);
+			border-color: darken(color(primary, light), 10);
 			color: color(mono, white);
 		}
 	}

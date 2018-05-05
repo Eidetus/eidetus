@@ -45,7 +45,7 @@
 		position: relative;
 		width: 100%;
 
-		&:hover { border-color: color(primary, red); }
+		&:hover { border-color: color(primary, light); }
 
 		&:after {
 			background-image: url('../img/youtube-play-button.png');

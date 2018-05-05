@@ -5,7 +5,12 @@ $spaceamounts: (0, 1, 2, 3, 4, 5);
 /// Called via color function
 $color-map: (
   primary: (
-    red: #c63838
+    light: #ff8800,
+    dark: #cc6c00
+  ),
+  secondary: (
+    light: #0099ff,
+    dark: #007acc
   ),
 
   gray: (

@@ -82,7 +82,7 @@
 		height: auto;
 		width: 100%;
 
-		&:hover { border-color: color(primary, red); }
+		&:hover { border-color: color(primary, light); }
 	}
 
 	@include breakpoint(mobile) {
