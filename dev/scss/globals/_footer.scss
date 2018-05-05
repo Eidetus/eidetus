@@ -1,0 +1,25 @@
+.footer {
+	background: color(gray, jet);
+	border: 0;
+	bottom: 0;
+	padding: 22px 0;
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+
+	.footer__social-link {
+		border-bottom: none;
+		display: block;
+		height: 44px;
+		transition: all 0.3s ease-in-out;
+		width: 44px;
+		
+		img {
+			height: 100%;
+			width: 100%;
+		}
+
+		&:hover { transform: translate(0, -5px); }
+	}
+}

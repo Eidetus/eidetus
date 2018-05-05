@@ -1,0 +1,12 @@
+{% extends "layout.nunjucks" %}
+
+{% set relative_path = '' %}
+
+{% block content %}
+
+	<div style="position: absolute; text-align: center; top: 50%; transform: translateY(-50%); width: 100%;">
+		<h1>Eidetus is currently under construction</h1>
+		<h2>Check back soon for further developments</h2>
+	</div>
+
+{% endblock %}

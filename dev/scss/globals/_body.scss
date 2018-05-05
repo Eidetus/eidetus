@@ -1,0 +1,190 @@
+/*
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+@include skel-breakpoints((
+	wide: '(max-width: 1680px)',
+	normal: '(max-width: 1280px)',
+	narrow: '(max-width: 980px)',
+	narrower: '(max-width: 840px)',
+	mobile: '(max-width: 736px)'
+));
+
+@include skel-layout((
+	reset: 'full',
+	boxModel: 'border',
+	grid: ( gutters: (50px, 50px) ),
+	conditionals: true,
+	containers: 1400px,
+	breakpoints: (
+		wide: (
+			containers: 1200px,
+			grid: (
+				gutters: (40px, 40px)
+			),
+		),
+		normal: (
+			containers: 960px,
+		),
+		narrow: (
+			containers: 95%,
+			grid: (
+				gutters: (30px, 30px)
+			),
+		),
+		narrower: (
+			containers: (95%, true),
+		),
+		mobile: (
+			containers: (100%, true),
+		)
+	)
+));
+
+$pattern-background-size: 25em;
+
+body {
+	background: color(gray, off-white);
+
+	&.overlay--open {
+		max-height: 100vh;
+		overflow: hidden;
+	}
+}
+
+body, 
+input, 
+select, 
+textarea {
+	color: color(gray, dark);
+	font-family: 'Lato', sans-serif;
+	font-size: 15pt;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 1.75em;
+
+	@include breakpoint(wide) {
+		font-size: 14pt;
+	}
+
+	@include breakpoint(normal) {
+		font-size: 13pt;
+		letter-spacing: 0.025em;
+		line-height: 1.65em;
+	}
+
+	@include breakpoint(narrow) {
+		font-size: 13pt;
+		letter-spacing: 0.025em;
+		line-height: 1.5em;
+	}
+}
+
+a {
+	border-bottom: 1px solid color(primary, red);
+	color: color(primary, red);
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		border-color: darken(color(primary, red), 20);
+		color: darken(color(primary, red), 20);
+	}
+}
+
+strong, 
+b { font-weight: 600; }
+
+p, 
+ul, 
+ol, 
+dl, 
+table, 
+blockquote,
+small {
+	display: block;
+	margin: 0 0 22px; 
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	color: inherit;
+	font-weight: 300;
+	line-height: 1.75em;
+	margin-bottom: 22px;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		border: 0;
+	}
+}
+
+h1 {
+	font-size: 44px;
+	letter-spacing: 0.1em;
+	line-height: 44px;
+
+	@include breakpoint(mobile) {
+		font-size: 33px;
+		line-height: 33px;
+	}
+}
+
+h2 {
+	font-size: 33px;
+	letter-spacing: 0.1em;
+	line-height: 33px;
+
+	@include breakpoint(mobile) {
+		font-size: 22px;
+		line-height: 22px;
+	}
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.025em;
+	line-height: 22px;
+
+	@include breakpoint(mobile) {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+sub {
+	font-size: 12px;
+	position: relative;
+	top: 8px;
+}
+
+sup {
+	font-size: 12px;
+	position: relative;
+	top: -8px;
+}
+
+hr {
+	border-top: 1px solid color(gray, dark);
+	margin-bottom: 22px;
+}
+
+blockquote {
+	border-left: solid 0.5em transparentize(color(gray, dark), 0.8);
+	font-style: italic;
+	padding: 1em 0 1em 2em;
+}
+
+p {
+	@include breakpoint(mobile) {
+		text-align: justify;
+	}
+}

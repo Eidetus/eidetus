@@ -1,0 +1,13 @@
+{% extends "layout.nunjucks" %}
+
+{% set relative_path = '' %}
+{% set header_class = 'header--alt' %}
+
+{% block content %}
+
+	<div class="content content--top">
+		<h1>Oops! Looks like you are lost! Please head back with the back button or click below.</h1>
+		<a href="index" class="button">Take me home</a>
+	</div>
+
+{% endblock %}

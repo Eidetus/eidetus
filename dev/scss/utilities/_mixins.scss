@@ -1,0 +1,103 @@
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+
+	text-decoration: none;
+
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
+	}
+
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+	@if $important {
+		$important: '!important';
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+
+/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
+/// @param {string} $svg SVG data URL.
+/// @return {string} Encoded SVG data URL.
+@function svg-url($svg) {
+
+	$svg: str-replace($svg, '"', '\'');
+	$svg: str-replace($svg, '<', '%3C');
+	$svg: str-replace($svg, '>', '%3E');
+	$svg: str-replace($svg, '&', '%26');
+	$svg: str-replace($svg, '#', '%23');
+	$svg: str-replace($svg, '{', '%7B');
+	$svg: str-replace($svg, '}', '%7D');
+	$svg: str-replace($svg, ';', '%3B');
+
+	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
+
+}
+
+/// Generates helper classes for margin and padding overrides
+@mixin generate_space_helpers() {
+  @each $space in $spaceamounts {
+	$new-space: $space * 11px;
+
+    .pad-#{$space} { padding: $new-space !important; }
+
+    .pad-top-#{$space} { padding-top: $new-space !important; }
+
+    .pad-right-#{$space} { padding-right: $new-space !important; }
+
+    .pad-bottom-#{$space} { padding-bottom: $new-space !important; }
+
+    .pad-left-#{$space} { padding-left: $new-space !important; }
+
+    .pad-vert-#{$space} {
+      padding-top: $new-space !important;
+      padding-bottom: $new-space !important;
+    }
+
+    .pad-sides-#{$space} {
+      padding-right: $new-space !important;
+      padding-left: $new-space !important;
+    }
+
+    .marg-#{$space} { margin: $new-space !important; }
+
+    .marg-top-#{$space} { margin-top: $new-space !important; }
+
+    .marg-right-#{$space} { margin-right: $new-space !important; }
+
+    .marg-bottom-#{$space} { margin-bottom: $new-space !important; }
+
+    .marg-left-#{$space} { margin-left: $new-space !important; }
+
+    .marg-vert-#{$space} {
+      margin-top: $new-space !important;
+      margin-bottom: $new-space !important;
+    }
+
+    .marg-sides-#{$space} {
+      margin-right: $new-space !important;
+      margin-left: $new-space !important;
+    }
+  }
+}

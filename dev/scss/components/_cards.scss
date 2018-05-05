@@ -1,0 +1,60 @@
+
+.cards {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto 22px;
+	max-width: $max-width;
+	padding: 0;
+}
+
+.card {
+	flex: 1 1 33%;
+	font-size: 0;
+	line-height: 0;
+	padding: 0 22px 22px;
+
+	.card__inner {
+		background-color: color(gray, light);
+		border: 1px solid color(gray, dark);
+		height: 100%;
+		width: 100%;
+	}
+
+	.card__inner--image {		
+		height: auto;
+		width: 100%;
+	}
+
+	.card__inner--text {
+		color: color(gray, jet);
+		font-size: initial;
+		line-height: initial;
+		text-align: center;
+		display: block;
+		padding: 22px;
+	}
+
+	@include breakpoint(mobile) {
+		flex: 1 1 100%;
+	}
+}
+
+.card--team {
+	.card__inner--image {
+		border: 5px solid color(gray, off-white);
+		border-radius: 50%;
+		display: block;
+		margin: 22px auto 0;
+		padding: 5.5px;
+		width: 60%;
+	}
+
+	.card__inner--text {
+		h3 { margin: 0 0 11px; }
+	}	
+
+	@include breakpoint(mobile) {
+		.card__hidden-on-mobile { display: none; }
+	}
+}
