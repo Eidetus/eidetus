@@ -8,3 +8,11 @@
     .color__#{$label}--bg { background-color: $value !important; }
   }
 }
+
+.text-center {
+	text-align: center;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
