@@ -1,0 +1,20 @@
+
+{#
+Global page footer with social media navigation
+@param path - prefix relative path for subpages
+#}
+{% macro footer(path) %}
+
+<div id="footer" class="footer">
+	<ul class="buttons">
+		<li><a class="footer__social-link" target="_blank" href="https://www.facebook.com/eidetus"><img src="{{ path }}app/img/icon-social-facebook.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://www.instagram.com/eidetus/"><img src="{{ path }}app/img/icon-social-insta.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://twitter.com/eidetus"><img src="{{ path }}app/img/icon-social-twitter.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://www.youtube.com/channel/UCfYoz2i0xDxTJ7hoYtRK5Tw"><img src="{{ path }}app/img/icon-social-youtube.png"></a></li>
+	</ul>
+	<div>
+		<span>Copyright © Expletive Studios. All rights reserved.</span>
+	</div>
+</div>
+
+{% endmacro %}

@@ -1,3 +1,6 @@
+{% import '../templates/partials/header.nunjucks' as header %}
+{% import '../templates/partials/footer.nunjucks' as footer %}
+{% import '../templates/partials/content.nunjucks' as content %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,9 @@
 <body>
   <div id="main-container" class="main-container">  
     
+    {{ header.header(relative_path, header_class) }}
     {% block content %} {% endblock %}
+    {{ footer.footer(relative_path) }}
 
   </div>
   <footer><script src="{{ relative_path }}app/js/main.js"></script></footer>
