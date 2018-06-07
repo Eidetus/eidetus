@@ -27,21 +27,31 @@
 		width: 50vw;
 	}
 
-	.button__icon {
+	.button__icon--container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		background: color(secondary, light);
-		border: 0;
-		border-radius: 50%;
 		bottom: 100px;
 		height: 44px;
 		position: absolute;
 		left: calc(50% - 22px);
 		width: 44px;
+	}
 
+	.button__icon {
+		background: color(secondary, light);
+		border: 0;
+		border-radius: 50%;
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	.button__icon--animation {
 		&:before,
 		&:after {
-		    animation-fill-mode: both;
+		    animation-fill-mode: both; 
 			background: color(secondary, light);
 			content: "";
 		    height: 88px;
@@ -51,7 +61,6 @@
 			top: calc(50% - 44px);
 		    opacity: 0;
 		    width: 88px;
-			z-index: 999;
 		}
 
 		&:before { animation: pulse-ring 1.8s 0.8s ease-out infinite; }
