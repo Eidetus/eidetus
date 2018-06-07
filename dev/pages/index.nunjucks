@@ -5,6 +5,18 @@
 {% block content %}
 
 <div class="content">
+	{% call content.banner('1920') %}
+
+	<div class="banner__inner">
+		<img src="{{ relative_path }}app/img/header-default.png">
+	</div>
+
+	<a href="#main" class="button__icon" animate="scroll">
+		<i class="button__icon--down-caret"></i>
+	</a>
+
+	{% endcall %}
+
 	<div class="content__container">
 
 		<p class="text-center">

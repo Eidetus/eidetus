@@ -1,0 +1,14 @@
+
+{#
+Full-width banner with css background image
+@param class - defines background image to be displayed
+#}
+{% macro banner(class) %}
+
+<div class="banner{% if class %} banner--{{ class }}{% endif %}">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}
