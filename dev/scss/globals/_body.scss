@@ -83,14 +83,14 @@ textarea {
 }
 
 a {
-	border-bottom: 1px solid color(primary, light);
-	color: color(primary, light);
+	border-bottom: 1px solid color(gray, off-white);
+	color: color(gray, off-white);
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.1s ease-in-out;
 
 	&:hover {
-		border-color: darken(color(primary, light), 20);
-		color: darken(color(primary, light), 20);
+		border-color: darken(color(gray, off-white), 20);
+		color: darken(color(gray, off-white), 20);
 	}
 }
 
