@@ -16,13 +16,12 @@ Global header with page navigation
 			<input class="nav__toggle-switch" type="checkbox" name="nav-toggle">
 			<span class="nav__toggle-icon"></span>
 		</div>
-		{#<ul class="nav__menu">
-			<li><a href="{{ path }}games/eidetus">Eidetus</a></li>
-			<li><a href="{{ path }}#newsletter" class="button button--attention" animate="scroll">Newsletter</a></li>
-			<li><a href="{{ path }}blog">Blog</a></li>
-			<li><a href="{{ path }}team">Team</a></li>
+		<ul class="nav__menu">
+			<li><a href="{{ path }}#media" class="button button__nav--secondary" animate="scroll">Media</a></li>
+			<li><a href="{{ path }}#newsletter" class="button button__nav--primary" animate="scroll">Newsletter</a></li>
+			<li><a href="javascript:void(0)">Blog</a></li>
 			<li><a href="javascript:void(0)">Contact</a></li>
-		</ul>#}
+		</ul>
 	</div>
 </div>
 

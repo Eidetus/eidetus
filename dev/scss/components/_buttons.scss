@@ -18,7 +18,7 @@ input[type="reset"],
 	cursor: pointer;
 
 	font-size: 0.8em;
-	font-weight: 900;
+	font-weight: 700;
 	letter-spacing: 2px;
 
 	text-align: center;
@@ -45,9 +45,22 @@ input[type="reset"],
 		}
 	}
 
-	&.button--attention {
+	&.button__nav--primary {
+		background: color(primary, light);
+		border-color: color(primary, light);
+		box-shadow: none;
+
+		&:hover {
+			background: darken(color(primary, light), 10);
+			border-color: darken(color(primary, light), 10);
+			color: color(mono, white);
+		}
+	}
+
+	&.button__nav--secondary {
 		background: color(secondary, light);
 		border-color: color(secondary, light);
+		box-shadow: none;
 
 		&:hover {
 			background: darken(color(secondary, light), 10);
