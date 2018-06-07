@@ -46,7 +46,7 @@
 $pattern-background-size: 25em;
 
 body {
-	background: color(gray, off-white);
+	background: color(primary, dark);
 
 	&.overlay--open {
 		max-height: 100vh;
@@ -58,7 +58,7 @@ body,
 input, 
 select, 
 textarea {
-	color: color(gray, dark);
+	color: color(gray, off-white);
 	font-family: 'Lato', sans-serif;
 	font-size: 15pt;
 	font-weight: 300;

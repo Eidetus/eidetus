@@ -30,7 +30,7 @@
 	.button__icon {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		background: color(primary, light);
+		background: color(secondary, light);
 		border: 0;
 		border-radius: 50%;
 		bottom: 100px;
@@ -42,7 +42,7 @@
 		&:before,
 		&:after {
 		    animation-fill-mode: both;
-			background: color(primary, light);
+			background: color(secondary, light);
 			content: "";
 		    height: 88px;
 		    border-radius: 50%;

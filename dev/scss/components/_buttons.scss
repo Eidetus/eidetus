@@ -11,9 +11,9 @@ input[type="reset"],
 	height: 44px;
 	line-height: 44px;
 
-	background: color(primary, light);
-	border: solid 1px color(primary, dark);
-	box-shadow: 1px 2px 4px 1px color(gray, dark);
+	background: color(secondary, light);
+	border: solid 1px color(secondary, light);
+	box-shadow: 1px 2px 4px 1px color(gray, jet);
 	color: color(mono, white);
 	cursor: pointer;
 
@@ -28,7 +28,7 @@ input[type="reset"],
 	transition: all 0.3s ease-in-out;
 
 	&:hover {
-		background: color(mono, white);
+		background: transparent;
 		border-color: color(primary, light);
 		box-shadow: none;
 		color: color(primary, light);
@@ -46,12 +46,12 @@ input[type="reset"],
 	}
 
 	&.button--attention {
-		background: color(primary, light);
-		border-color: color(primary, light);
+		background: color(secondary, light);
+		border-color: color(secondary, light);
 
 		&:hover {
-			background: darken(color(primary, light), 10);
-			border-color: darken(color(primary, light), 10);
+			background: darken(color(secondary, light), 10);
+			border-color: darken(color(secondary, light), 10);
 			color: color(mono, white);
 		}
 	}
