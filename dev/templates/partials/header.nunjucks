@@ -7,9 +7,9 @@ Global header with page navigation
 {% macro header(path, class) %}
 
 <div class="header{% if class %} {{ class }}{% endif %}">
-	<h1 class="header__logo">
-		<a href="/">Eidetus</span></a>
-	</h1>
+	<a class="header__logo" href="/">
+		<img src="{{ path }}app/img/header-small.png">
+	</a>
 
 	<div class="nav__container">
 		<div class="nav__toggle">
