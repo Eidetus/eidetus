@@ -20,11 +20,51 @@
 
 	{% endcall %}
 
-	<div class="content__container">
+	<div id="main" class="content__container">
 
 		<p class="text-center">
-			Become a psychic warrior capable of manipulating reality fueled by the power of your memories. Transform the energy of loss, love, grief, joy, friendship, and rivalry into psychic power you can use to blow $#!% up.
+			Become a psychic warrior capable of manipulating reality fueled by the power of your memories. Transform the energy of loss, love, grief, joy, friendship, and rivalry into psychic power you can use to blow <span class="bold">$#!%</span> up.
 		</p>
+
+	</div>
+	<div class="content__container">
+
+		<div class="banner__content">
+
+			<div class="banner__inner" style="left: initial;">
+				<h2 class="text-upper" style="margin-bottom: 0;"><strong>B.Y.O.H.</strong></h2>
+				<p style="opacity: 0.5;">(Build Your Own Hero!)</p>
+			</div>
+
+			<div class="banner__content--background"></div>
+
+		</div>
+		<div class="banner__content banner__content--alt">
+
+			<div class="banner__inner">
+				<h3><strong>Reveries</strong></h3>
+
+				<p>
+					Whether aiming to be fierce and formidable, quick and nimble, or tactical and disruptive, your play style can be curated when building your reveries. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.
+				</p>
+			</div>
+			
+			<div class="banner__content--background"></div>
+
+		</div>
+		<div class="banner__content">
+
+			<div class="banner__inner">
+				<h3><strong>Equipment</strong></h3>
+				<p>
+					Each character can be outfitted with an assortment of gear. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.
+				</p>
+			</div>
+
+			<div class="banner__content--background"></div>			
+
+		</div>
+
 
 	</div>
 	<div class="content__container">
@@ -61,24 +101,6 @@
 			<li>Character - cause-and-effect triggers to grant temporary utility</li>
 			<li>Movement - modifications to player mobility</li>
 		</ul>
-
-	</div>
-	<div class="content__container">
-
-		<h2 class="text-upper">Build Your Own Hero (BYOH)</h2>
-
-		<h3>Reveries</h3>
-
-		<p>
-			Whether aiming to be fierce and formidable, quick and nimble, or tactical and disruptive, your play style can be curated when building your reveries. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.
-		</p>
-
-		<h3>Equipment</h3>
-
-		<p>
-			Each character can be outfitted with an assortment of gear. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.
-		</p>
-
 
 	</div>
 	<div class="content__container">

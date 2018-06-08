@@ -97,3 +97,53 @@
 		}
 	}
 }
+
+.banner__content {
+	height: 180px;
+	margin: 0 0 20px;
+	position: relative;
+
+	.banner__inner {
+		bottom: 20px;
+		left: 220px;
+		right: 220px;
+		top: 20px;
+		position: absolute;
+		z-index: 1000;
+	}
+
+	.banner__content--background:before {
+		background-image: url('../img/banner-content.png');
+		background-position: center center;
+		background-size: cover;
+		content: "";
+		height: 180px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1200px;
+		z-index: 0;
+	}
+
+	&.banner__content--alt .banner__content--background:before { transform: scaleX(-1); }
+
+
+	@include breakpoint(mobile) {
+		background-color: rgba(color(primary, darkest), 0.5);
+		height: auto;
+		overflow: hidden;
+		padding: 20px 10px 0;
+
+		.banner__inner {
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			position: relative;
+		}
+
+		.banner__content--background {
+			&:before { display: none; }
+		}
+	}
+}
