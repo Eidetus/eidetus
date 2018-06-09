@@ -1,5 +1,5 @@
-/// Increments of spacing for help classes
-$spaceamounts: (0, 1, 2, 3, 4, 5);
+/// Increments of spacing for helper classes
+$space-amounts: (0, 1, 2, 3, 4, 5);
 
 /// All colors available for elements
 /// Called via color function
@@ -15,7 +15,38 @@ $color-map: (
     light: #c63837,
     dark: #651010
   ),
-
+  school1: (
+    primary: #ff8800,
+    secondary: #0077ff
+  ),
+  school2: (
+    primary: #f0f164,
+    secondary: #3b3b63
+  ),
+  school3: (
+    primary: #a76df2,
+    secondary: #6d76f2
+  ),
+  school4: (
+    primary: #ab1818,
+    secondary: #ea4bcb
+  ),
+  school5: (
+    primary: #4dcafb,
+    secondary: #3b004f
+  ),
+  school6: (
+    primary: #b0f9f3,
+    secondary: #2cdb04
+  ),
+  type: (
+    attack: #e13927,
+    defense: #277ee1,
+    utility: #f9d500,
+    ability: #e13927,
+    character: #277ee1,
+    movement: #f9d500,
+  ),
   gray: (
     off-black: #1c2021,
     jet: #393939,

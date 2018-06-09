@@ -101,32 +101,70 @@
 .banner__content {
 	height: 180px;
 	margin: 0 0 20px;
+	overflow: hidden;
 	position: relative;
 
 	.banner__inner {
-		bottom: 20px;
-		left: 220px;
-		right: 220px;
-		top: 20px;
-		position: absolute;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		position: relative;
 		z-index: 1000;
 	}
 
-	.banner__content--background:before {
+	&:not(.banner__content--alt) .banner__inner {
+		padding-left: 150px;
+		padding-right: 220px;
+	}
+
+	&.banner__content--alt .banner__inner {
+		padding-left: 220px;
+		padding-right: 150px;
+	}
+
+	.banner__content--background {
 		background-image: url('../img/banner-content.png');
 		background-position: center center;
 		background-size: cover;
 		content: "";
 		height: 180px;
 		position: absolute;
-		right: 0;
 		top: 0;
 		width: 1200px;
 		z-index: 0;
 	}
 
-	&.banner__content--alt .banner__content--background:before { transform: scaleX(-1); }
+	&:not(.banner__content--alt) .banner__content--background { 
+		left: 0;
+	}
 
+	&.banner__content--alt .banner__content--background { 
+		right: 0;
+		transform: scaleX(-1); 
+	}
+
+	@include breakpoint(normal) {
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 180px;
+			padding-right: 80px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 80px;
+			padding-right: 180px;
+		}
+	}
+
+	@include breakpoint(narrower) {
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 120px;
+			padding-right: 20px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 20px;
+			padding-right: 120px;
+		}
+	}
 
 	@include breakpoint(mobile) {
 		background-color: rgba(color(primary, darkest), 0.5);
@@ -135,15 +173,35 @@
 		padding: 20px 10px 0;
 
 		.banner__inner {
-			bottom: 0;
-			left: 0;
-			right: 0;
-			top: 0;
+			padding: 0 !important;
 			position: relative;
 		}
 
-		.banner__content--background {
-			&:before { display: none; }
-		}
+		.banner__content--background { display: none; }
 	}
 }
+
+[class^="banner__content--info"] {
+	color: color(gray, off-white);
+	height: 120px;
+	margin-bottom: 10px;
+	padding: 20px;
+	width: 100%;
+
+	&.banner__content--alt { color: color(gray, jet); }
+}
+
+.banner__content--info-1 { background: /*linear-gradient(to right, */color(school1, primary)/*, color(school1, secondary))*/; }
+.banner__content--info-2 { background: /*linear-gradient(to right, */color(school2, primary)/*, color(school2, secondary))*/; }
+.banner__content--info-3 { background: /*linear-gradient(to right, */color(school3, primary)/*, color(school3, secondary))*/; }
+.banner__content--info-4 { background: /*linear-gradient(to right, */color(school4, primary)/*, color(school4, secondary))*/; }
+.banner__content--info-5 { background: /*linear-gradient(to right, */color(school5, primary)/*, color(school5, secondary))*/; }
+.banner__content--info-6 { background: /*linear-gradient(to right, */color(school6, primary)/*, color(school6, secondary))*/; }
+
+.banner__content--info-attack { background: color(type, attack); }
+.banner__content--info-defense { background: color(type, defense); }
+.banner__content--info-utility { background: color(type, utility); }
+
+.banner__content--info-ability { background: color(type, ability); }
+.banner__content--info-character { background: color(type, character); }
+.banner__content--info-movement { background: color(type, movement); }

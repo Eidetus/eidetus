@@ -57,7 +57,7 @@
 
 /// Generates helper classes for margin and padding overrides
 @mixin generate_space_helpers() {
-  @each $space in $spaceamounts {
+  @each $space in $space-amounts {
 	$new-space: $space * 11px;
 
     .pad-#{$space} { padding: $new-space !important; }

@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="content">
-	{% call content.banner('1920') %}
+	{% call content.hero('1920') %}
 
 	<div class="banner__inner">
 		<img src="{{ relative_path }}app/img/header-default.png">
@@ -28,84 +28,66 @@
 
 	</div>
 	<div class="content__container">
-
 		<div class="banner__content">
-
-			<div class="banner__inner" style="left: initial;">
+			<div class="banner__inner" style="float: right">
 				<h2 class="text-upper" style="margin-bottom: 0;"><strong>B.Y.O.H.</strong></h2>
-				<p style="opacity: 0.5;">(Build Your Own Hero!)</p>
+				<small style="opacity: 0.5; font-size: 14px;">(Build Your Own Hero!)</small>
 			</div>
-
 			<div class="banner__content--background"></div>
-
 		</div>
+
+		{{ content.contentBanner(
+			'Reveries', 
+			'Whether aiming to be fierce and formidable, quick and nimble, or tactical and disruptive, your play style can be curated when building your reveries. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.', 
+			true
+		) }}
+
+		{{ content.contentBanner(
+			'Equipment', 
+			'Each character can be outfitted with an assortment of gear. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.', 
+			false
+		) }}
+
+	</div>
+	<div class="content__container">
+
 		<div class="banner__content banner__content--alt">
-
 			<div class="banner__inner">
-				<h3><strong>Reveries</strong></h3>
-
-				<p>
-					Whether aiming to be fierce and formidable, quick and nimble, or tactical and disruptive, your play style can be curated when building your reveries. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.
-				</p>
+				<h2 class="text-upper"><strong>Learn About</strong></h2>
 			</div>
-			
 			<div class="banner__content--background"></div>
-
 		</div>
-		<div class="banner__content">
 
+		{{ content.contentBanner('Schools', 'Anchoring emotions that associate multiple skills together', false) }}
+
+		{{ content.infoBanner(1, 'Shock & Awe', 'Disrupt early on before shifting to powerful finishers') }}
+		{{ content.infoBanner(2, 'Light & Dark', 'Empower standard skills with areas of light and darkness', true) }}
+		{{ content.infoBanner(3, 'Time & Space', 'Control engagements with position and speed manipulation') }}
+		{{ content.infoBanner(4, 'Pain & Pleasure', 'Sacrifice your own health to manipulate life on a grand scale') }}
+		{{ content.infoBanner(5, 'Null & Void', 'Limit opposing skill activations while capitalizing on the inactions') }}
+		{{ content.infoBanner(6, 'Ups & Downs', 'Enhance standard skills with airborne mobility', true) }}
+
+		{{ content.contentBanner('Skills', 'Memories given form to provide offense, defense, or versatility', true) }}
+
+		{{ content.infoBanner('attack', 'Attack', 'Precise shots to clustered bombardments, these are the main means of destroying your opponents') }}
+		{{ content.infoBanner('defense', 'Defense', 'Directional or encompassing fortifications that provide brief respites from opposing onslaughts') }}
+		{{ content.infoBanner('utility', 'Utility', 'Complementary empowerments that aid mobility, damage, and survival', true) }}
+
+		{{ content.contentBanner('Passives', 'Unlockable augments that enhance your combat effectiveness', false) }}
+
+		{{ content.infoBanner('ability', 'Ability', 'Provides additional bonuses to all or a specific set of skills') }}
+		{{ content.infoBanner('character', 'Character', 'Cause-and-effect triggers to grant temporary utility') }}
+		{{ content.infoBanner('movement', 'Movement', 'Modifications to player mobility', true) }}
+
+	</div>
+	<div class="content__container">
+
+		<div class="banner__content banner__content--alt">
 			<div class="banner__inner">
-				<h3><strong>Equipment</strong></h3>
-				<p>
-					Each character can be outfitted with an assortment of gear. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.
-				</p>
+				<h2 class="text-upper"><strong>How to Play</strong></h2>
 			</div>
-
-			<div class="banner__content--background"></div>			
-
+			<div class="banner__content--background"></div>
 		</div>
-
-
-	</div>
-	<div class="content__container">
-
-		<h2 class="text-upper">Learn About</h2>
-
-		<h3>Schools</h3>
-		<small>Anchoring emotions that associate multiple skills together</small>
-
-		<ul>
-			<li>Shock &amp; Awe - disrupt early on before shifting to powerful finishers</li>
-			<li>Light &amp; Dark - empower standard skills with areas of light and darkness</li>
-			<li>Time &amp; Space - control the engagement with position and speed manipulation</li>
-			<li>Pain &amp; Pleasure - sacrifice your own health to manipulate life on a grand scale</li>
-			<li>Null &amp; Void - limit opposing skill activations while capitalizing on the inactions</li>
-			<li>Ups &amp; Downs - enhance standard skills with airborne mobility</li>
-		</ul>
-
-
-		<h3>Skills</h3>
-		<small>Memories given form to provide offense, defense, or versatility</small>
-
-		<ul>
-			<li>Attack - precise shots to clustered bombardments, these are the main means of destroying your opponents</li>
-			<li>Defense - directional or encompassing fortifications that provide brief respites from opposing onslaughts</li>
-			<li>Utility - complementary empowerments that aid mobility, damage, and survival</li>
-		</ul>
-
-		<h3>Passives</h3>
-		<small>Unlockable augments that enhance your combat effectiveness</small>
-
-		<ul>
-			<li>Ability - provides additional bonuses to all or a specific set of skills</li>
-			<li>Character - cause-and-effect triggers to grant temporary utility</li>
-			<li>Movement - modifications to player mobility</li>
-		</ul>
-
-	</div>
-	<div class="content__container">
-
-		<h2 class="text-upper">How to Play</h2>
 
 		<h3>Equip Skills</h3>
 
@@ -146,7 +128,12 @@
 
 	<div class="content__container">
 
-		<h2 class="text-upper">Gameplay Tips</h2>
+		<div class="banner__content">
+			<div class="banner__inner">
+				<h2 class="text-upper"><strong>Gameplay Tips</strong></h2>
+			</div>
+			<div class="banner__content--background"></div>
+		</div>
 
 		<ul>
 			<li>Understand and utilize the game map and enemy movements to your advantage.</li>
@@ -158,20 +145,24 @@
 	</div>
 	<div class="content__container">
 
-		<h2 class="text-upper">Unlockables</h2>
+		<div class="banner__content banner__content--alt">
+			<div class="banner__inner">
+				<h2 class="text-upper"><strong>Unlockables</strong></h2>
+			</div>
+			<div class="banner__content--background"></div>
+		</div>
 
-		<h3>Skills and Passives</h3>
+		{{ content.contentBanner(
+			'Skills and Passives', 
+			"At each level you earn shards, which can be spent on packs of skills. These packs contain a variety of different skills and passives, with varying levels of prestige and power. Every few levels a bonus pack is earned as well, completely on us.", 
+			false
+		) }}
 
-		<p>
-			At each level you earn a number of shards, which can be spent on packs of skills. These packs contain a variety of different skills and passives, with varying levels of prestige and power. Every five levels a bonus pack is earned as well, free of charge. If expanding your collection of skills through packs isn't enough, you can also buy skills and passives individually.
-		</p>
-
-		<h3>Equipment</h3>
-
-		<p>
-			The cosmetic accessories available to deck out your characters can be unlocked with shards. Each cosmetic can be used on all characters, giving the most bang-for-your-shard while you mix and match with various outfits.
-		</p>
-
+		{{ content.contentBanner(
+			'Equipment', 
+			'The cosmetic accessories available to deck out your characters can be unlocked with shards. Each cosmetic can be used on all characters, giving the most bang-for-your-shard while you mix and match with various outfits.', 
+			true
+		) }}
 
 	</div>
 </div>
