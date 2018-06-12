@@ -24,7 +24,7 @@ Stylized banners to display content headers
 <div class="banner__content{% if alt %} banner__content--alt{% endif %}">
 	<div class="banner__inner">
 		<h3 class="text-upper"><strong>{{ name }}</strong></h3>
-		<small>{{ description }}</small>
+		<p>{{ description }}</p>
 	</div>
 	<div class="banner__content--background"></div>
 </div>
