@@ -8,6 +8,9 @@
 'utilities/helpers';
 
 @import
+'overrides/mailchimp';
+
+@import
 'globals/body',
 'globals/header',
 'globals/footer';
@@ -19,11 +22,11 @@
 'components/cards',
 'components/content',
 'components/lists',
-'components/newsletters',
+'components/modals',
 'components/panels',
 'components/thumbnails',
 'components/wrappers';
 
 @import
 'pages/404',
-'pages/home'
+'pages/home';

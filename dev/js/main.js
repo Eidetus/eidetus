@@ -5,4 +5,5 @@
 // Custom JavaScript partials
 // =require partials/footer.js
 // =require partials/header.js
+// =require partials/modal.js
 // =require partials/scroll.js

@@ -7,19 +7,19 @@
 	position: absolute;
 	text-align: center;
 	width: 100%;
+}
 
-	.footer__social-link {
-		border-bottom: none;
-		display: block;
-		height: 33px;
-		transition: all 0.3s ease-in-out;
-		width: 33px;
-		
-		img {
-			height: 100%;
-			width: 100%;
-		}
-
-		&:hover { transform: translate(0, -5px); }
+.footer__social-link {
+	border-bottom: none;
+	display: block;
+	height: 33px;
+	transition: all 0.3s ease-in-out;
+	width: 33px;
+	
+	img {
+		height: 100%;
+		width: 100%;
 	}
+
+	&:hover { transform: translate(0, -5px); }
 }

@@ -1,0 +1,36 @@
+
+.modal__container {
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9998;
+
+	&:before {
+		background-color: rgba(color(mono, black), 0.75);
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 9998;
+	}
+}
+
+.modal {
+	background-color: color(gray, jet);
+	left: 50%;
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 400px;
+	z-index: 9999;
+}
+
+.modal--visible {
+	display: block;
+}

@@ -15,6 +15,7 @@
     
     {{ header.header(relative_path, header_class) }}
     {% block content %} {% endblock %}
+    {{ footer.social_links(relative_path) }}
     {{ footer.footer(relative_path) }}
 
   </div>

@@ -15,7 +15,7 @@ $(document).on('click', '[animate="scroll"]', function(e) {
 	else {
 		// Animate scroll over specified time
 		$('html, body').animate({
-			scrollTop: $(scrollTarget).offset().top
+			scrollTop: $(scrollTarget).offset() ? $(scrollTarget).offset().top : 0
 		}, 500, 'linear');
 	}
 });

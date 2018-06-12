@@ -28,10 +28,10 @@ input[type="reset"],
 	transition: all 0.3s ease-in-out;
 
 	&:hover {
-		background: transparent;
-		border-color: color(primary, light);
+		background: darken(color(secondary, light), 10);
+		border-color: darken(color(secondary, light), 10);
 		box-shadow: none;
-		color: color(primary, light);
+		color: color(mono, white);
 	}
 
 	&.button--alternate {
