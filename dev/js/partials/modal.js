@@ -17,10 +17,9 @@ $(document).on('click', '[reveal-modal]', function(e) {
 	
 });
 
-$(document).on('click', '[close-modal]:not(.modal)', function(e) {
-	if (!e.originalEvent.srcElement.hasAttribute('[close-modal]')) { 
-		return; 
-	}
+$(document).on('click', '[close-modal]', function(e) {
+	// Ensure the clicked element is able to close modal (avoids propagation)
+	if (!e.originalEvent.srcElement.hasAttribute('close-modal')) { return; }
 
 	// Find modal container with matching ID
 	var modal = $(document).find('.modal--visible').removeClass('modal--visible');
