@@ -56,6 +56,10 @@
 
 			<h2 class="text-right text-upper"><strong>Learn About</strong></h2>
 
+			{% call content.carousel() %}
+
+			{% call content.carousel_card() %}
+
 			{{ content.contentBanner('Schools', 'Anchoring emotions that associate multiple skills together', false) }}
 
 			{{ content.infoBanner(1, 'Shock & Awe', 'Disrupt early on before shifting to powerful finishers') }}
@@ -65,17 +69,29 @@
 			{{ content.infoBanner(5, 'Null & Void', 'Limit opposing skill activations while capitalizing on the inactions') }}
 			{{ content.infoBanner(6, 'Ups & Downs', 'Enhance standard skills with airborne mobility', true) }}
 
-			{{ content.contentBanner('Skills', 'Memories given form to provide offense, defense, or versatility', true) }}
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			{{ content.contentBanner('Skills', 'Memories given form to provide offense, defense, or versatility', false) }}
 
 			{{ content.infoBanner('attack', 'Attack', 'Precise shots to clustered bombardments, these are the main means of destroying your opponents') }}
 			{{ content.infoBanner('defense', 'Defense', 'Directional or encompassing fortifications that provide brief respites from opposing onslaughts') }}
 			{{ content.infoBanner('utility', 'Utility', 'Complementary empowerments that aid mobility, damage, and survival', true) }}
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
 
 			{{ content.contentBanner('Passives', 'Unlockable augments that enhance your combat effectiveness', false) }}
 
 			{{ content.infoBanner('ability', 'Ability', 'Provides additional bonuses to all or a specific set of skills') }}
 			{{ content.infoBanner('character', 'Character', 'Cause-and-effect triggers to grant temporary utility') }}
 			{{ content.infoBanner('movement', 'Movement', 'Modifications to player mobility', true) }}
+
+			{% endcall %}
+
+			{% endcall %}
 
 		</div>
 	</div>
@@ -129,9 +145,10 @@
 
 			<ul>
 				<li>Combo those skills. One-offs are great, but a series of follow-ups will really turn the tide of a fight.</li>
-				<li>Keep those trigger fingers twitch'n. Get a shot in before they can react and raise that defense to block incoming attacks. Every second counts.</li>
+				<li>Keep those trigger fingers twitch'n. Get a shot in before they can react. Make sure to raise that defense to block incoming attacks too.</li>
 				<li>WOMPs capture faster with teammates. Stick together and that objective is practically yours.</li>
-				<li>Skills need mana. Stronger skills need even more mana. Raise your max mana from the jungles between each WOMP.</li>
+				<li>Skills need mana. Stronger skills need even more mana! Raise your max mana from the jungles between each WOMP.</li>
+				<li>Flank and outmanuever the opposing team. Use the overhead structures and underpasses to get the bead on them.</li>
 			</ul>
 
 		</div>

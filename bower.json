@@ -13,6 +13,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "jquery": "^3.0.0"
+    "jquery": "^3.0.0",
+    "owl.carousel": "^2.3.4"
   }
 }
