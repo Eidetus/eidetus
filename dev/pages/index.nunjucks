@@ -60,14 +60,22 @@
 
 			{% call content.carousel_card() %}
 
-			{{ content.contentBanner('Schools', 'Anchoring emotions that associate multiple skills together', false) }}
+			<div class="flex-row">
+
+			{{ content.contentBanner('Schools', 'Schools are collections of shared memories, each forged from a single significant event. Psyphers can harness the raw emotion from these recollections and channel that into distinct forms as skills.', false) }}
 
 			{{ content.infoBanner(1, 'Shock & Awe', 'Disrupt early on before shifting to powerful finishers') }}
+
 			{{ content.infoBanner(2, 'Light & Dark', 'Empower standard skills with areas of light and darkness', true) }}
+
 			{{ content.infoBanner(3, 'Time & Space', 'Control engagements with position and speed manipulation') }}
+			{#
 			{{ content.infoBanner(4, 'Pain & Pleasure', 'Sacrifice your own health to manipulate life on a grand scale') }}
 			{{ content.infoBanner(5, 'Null & Void', 'Limit opposing skill activations while capitalizing on the inactions') }}
 			{{ content.infoBanner(6, 'Ups & Downs', 'Enhance standard skills with airborne mobility', true) }}
+			#}
+
+			</div>
 
 			{% endcall %}
 
@@ -75,9 +83,15 @@
 
 			{{ content.contentBanner('Skills', 'Memories given form to provide offense, defense, or versatility', false) }}
 
+			<div class="flex-row">
+
 			{{ content.infoBanner('attack', 'Attack', 'Precise shots to clustered bombardments, these are the main means of destroying your opponents') }}
+
 			{{ content.infoBanner('defense', 'Defense', 'Directional or encompassing fortifications that provide brief respites from opposing onslaughts') }}
+
 			{{ content.infoBanner('utility', 'Utility', 'Complementary empowerments that aid mobility, damage, and survival', true) }}
+
+			</div>
 
 			{% endcall %}
 
@@ -85,9 +99,15 @@
 
 			{{ content.contentBanner('Passives', 'Unlockable augments that enhance your combat effectiveness', false) }}
 
+			<div class="flex-row">
+				
 			{{ content.infoBanner('ability', 'Ability', 'Provides additional bonuses to all or a specific set of skills') }}
+
 			{{ content.infoBanner('character', 'Character', 'Cause-and-effect triggers to grant temporary utility') }}
+
 			{{ content.infoBanner('movement', 'Movement', 'Modifications to player mobility', true) }}
+
+			</div>
 
 			{% endcall %}
 

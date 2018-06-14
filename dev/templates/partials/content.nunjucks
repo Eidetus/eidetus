@@ -39,9 +39,11 @@ Stylized banners to display important information
 #}
 {% macro infoBanner(ID, name, description, alt) %}
 
-<div class="banner__content--info-{{ ID }}{% if alt %} banner__content--alt{% endif %}">
-	<h4><strong>{{ name }}</strong></h4>
-	<small>{{ description }}</small>
+<div class="col-sm-4">
+	<div class="banner__info-{{ ID }}{% if alt %} banner__content--alt{% endif %}">
+		<h4><strong>{{ name }}</strong></h4>
+		<p>{{ description }}</p>
+	</div>
 </div>
 
 {% endmacro %}
