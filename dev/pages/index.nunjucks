@@ -62,7 +62,7 @@
 
 			<div class="flex-row">
 
-			{{ content.contentBanner('Schools', 'Schools are collections of shared memories, each forged from a single significant event. Psyphers can harness the raw emotion from these recollections and channel that into distinct forms as skills.', false) }}
+			{{ content.contentBanner('Schools', 'Collections of shared memories, each forged from a single significant event. Psyphers can harness the raw emotion from these recollections and channel them into distinct forms as skills.', false) }}
 
 			{{ content.infoBanner(1, 'Shock & Awe', 'Disrupt early on before shifting to powerful finishers') }}
 
@@ -100,7 +100,7 @@
 			{{ content.contentBanner('Passives', 'Unlockable augments that enhance your combat effectiveness', false) }}
 
 			<div class="flex-row">
-				
+
 			{{ content.infoBanner('ability', 'Ability', 'Provides additional bonuses to all or a specific set of skills') }}
 
 			{{ content.infoBanner('character', 'Character', 'Cause-and-effect triggers to grant temporary utility') }}
