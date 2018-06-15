@@ -69,3 +69,7 @@ $max-width: 1280px;
 $grid-columns: 12;
 
 $grid-gutter-width: 0;
+
+/// Breakpoints.
+/// @var {list}
+$breakpoints: () !global;

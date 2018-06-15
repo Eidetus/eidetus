@@ -1,8 +1,3 @@
-/*
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 @include skel-breakpoints((
 	wide: '(max-width: 1680px)',
@@ -12,10 +7,10 @@
 	mobile: '(max-width: 736px)'
 ));
 
+@include reset('full');
+@include boxModel('border');
+
 @include skel-layout((
-	reset: 'full',
-	boxModel: 'border',
-	grid: ( gutters: (50px, 50px) ),
 	conditionals: true,
 	containers: 1400px,
 	breakpoints: (
