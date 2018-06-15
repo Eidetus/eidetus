@@ -66,10 +66,17 @@ $color-map: (
 /// Maximum width of non-full width content
 $max-width: 1280px;
 
+// Number of columns generated for the grid
 $grid-columns: 12;
-
 $grid-gutter-width: 0;
+
+// Media query upper sizes
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+$screen-xl: 1920px;
 
 /// Breakpoints.
 /// @var {list}
-$breakpoints: () !global;
+//$breakpoints: () !global;

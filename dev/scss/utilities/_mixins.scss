@@ -88,14 +88,6 @@
   }
 }
 
-///
-/// Sets breakpoints.
-/// @param {map} $x Breakpoints.
-///
-@mixin skel-breakpoints($x: ()) {
-  $breakpoints: $x !global;
-}
-
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin flex-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
   @for $i from (1 + 1) through $grid-columns {
@@ -109,7 +101,13 @@
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index >= 0) {
     .col-#{$class}-#{$index} {
-      width: percentage(($index / $grid-columns));
+      flex: 1 1 percentage(($index / $grid-columns));
+
+      @if ($index == $grid-columns) {
+        padding: 0 !important;
+      }
+
+      padding: 0 10px !important;
     }
   }
   @if ($type == offset) {
@@ -130,8 +128,6 @@
 @mixin make-grid($class) {
   @include flex-grid-columns($class);
   @include loop-grid-columns($grid-columns, $class, width);
-  @include loop-grid-columns($grid-columns, $class, pull);
-  @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
 }
 
@@ -149,27 +145,9 @@
   }
 }
 
-/// Wraps @content in a @media block using a given breakpoint.
-/// @param {string} $breakpoint Breakpoint.
-/// @param {map} $queries Additional queries.
-@mixin breakpoint($breakpoint: null, $queries: null) {
-  $query: 'screen';
-
-  // Breakpoint.
-  @if $breakpoint and map-has-key($breakpoints, $breakpoint) {
-    $query: $query + ' and ' + map-get($breakpoints, $breakpoint);
-  }
-
-  // Queries.
-  @if $queries {
-    @each $k, $v in $queries {
-      $query: $query + ' and (' + $k + ':' + $v + ')';
-    }
-  }
-
-  @media #{$query} {
-      @content;
-  }
+// Mobile first breakpoint
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) { @content; }
 }
 
 /// Resets browser styles.

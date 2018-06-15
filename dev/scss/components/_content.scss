@@ -22,7 +22,7 @@
 		text-align: center;
 	}
 
-	&.content--top { padding: 73px 0 0; }
+	&.content--top { padding: 70px 0 0; }
 
 	.content__container {
 		margin: 0 auto;
@@ -49,7 +49,7 @@
 		}
 	}
 
-	@include breakpoint(mobile) {
-		&.content--top { padding: 70px 0 0; }
+	@include breakpoint($screen-sm) {
+		&.content--top { padding: 73px 0 0; }
 	}
 }

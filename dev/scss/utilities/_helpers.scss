@@ -1,11 +1,4 @@
 
-// Generate grid for each screen size
-@include make-grid('xs');
-@include make-grid('sm');
-@include make-grid('md');
-@include make-grid('lg');
-@include make-grid('xl');
-
 // Gemerate helper classes for padding and margin modifiers
 @include generate_space_helpers();
 
@@ -16,6 +9,10 @@
     .color__#{$label}--border { border-color: $value !important; }
     .color__#{$label}--bg { background-color: $value !important; }
   }
+}
+
+.mobile-only {
+	@include breakpoint($screen-xs) { display: none; }
 }
 
 .bold {

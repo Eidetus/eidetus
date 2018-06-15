@@ -1,12 +1,12 @@
 .banner {
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-color: color(gray, jet);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
-	height: 60vh;
+	height: 80vh;
 	margin-top: 71px;
 	padding: 80px 0 0;
 	position: relative;
@@ -24,7 +24,7 @@
 		display: inline-block;
 		max-width: 1920px;
 		opacity: 0;
-		width: 50vw;
+		width: 90vw;
 	}
 
 	.button__icon--container {
@@ -87,13 +87,12 @@
 		}
 	}
 
-	@include breakpoint(mobile) {
-		background-attachment: scroll;
-		background-size: cover;
-		height: 80vh;
+	@include breakpoint($screen-md) {
+		background-attachment: fixed;
+		height: 60vh;
 
 		.banner__inner img {
-			width: 90vw;
+			width: 50vw;
 		}
 	}
 }
@@ -107,96 +106,98 @@
 }
 
 .banner__content {
-	height: 180px;
+	background-color: rgba(color(primary, darkest), 0.5);
+	height: auto;
 	margin: 0 0 20px;
 	overflow: hidden;
+	padding: 20px 20px 0;
 	position: relative;
 
 	.banner__inner {
-		padding-bottom: 20px;
-		padding-top: 20px;
+		padding: 20px 0;
 		position: relative;
 		z-index: 1000;
-	}
+	}	
 
-	&:not(.banner__content--alt) .banner__inner {
-		padding-left: 150px;
-		padding-right: 220px;
-	}
-
-	&.banner__content--alt .banner__inner {
-		padding-left: 220px;
-		padding-right: 150px;
-	}
-
-	.banner__content--background {
-		background-image: url('../img/banner-content.png');
-		background-position: center center;
-		background-size: cover;
-		content: "";
+	@include breakpoint($screen-sm) {
+		background-color: transparent;
 		height: 180px;
-		position: absolute;
-		top: 0;
-		width: 1200px;
-		z-index: 0;
-	}
 
-	&:not(.banner__content--alt) .banner__content--background { 
-		left: 0;
-	}
+		.banner__inner {
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
 
-	&.banner__content--alt .banner__content--background { 
-		right: 0;
-		transform: scaleX(-1); 
-	}
+		.banner__content--background {
+			background-image: url('../img/banner-content.png');
+			background-position: center center;
+			background-size: cover;
+			display: block;
+			height: 180px;
+			position: absolute;
+			top: 0;
+			width: 1200px;
+			z-index: 0;
+		}
 
-	@include breakpoint(normal) {
 		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 180px;
-			padding-right: 80px;
+			padding-left: 130px;
+			padding-right: 30px;
 		}
 
 		&.banner__content--alt .banner__inner {
-			padding-left: 80px;
+			padding-left: 30px;
+			padding-right: 130px;
+		}
+
+		&:not(.banner__content--alt) .banner__content--background { 
+			left: 0;
+		}
+
+		&.banner__content--alt .banner__content--background { 
+			right: 0;
+			transform: scaleX(-1); 
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 180px;
+			padding-right: 130px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 130px;
 			padding-right: 180px;
 		}
 	}
 
-	@include breakpoint(narrower) {
+	@include breakpoint($screen-lg) {
 		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 120px;
-			padding-right: 20px;
+			padding-left: 150px;
+			padding-right: 220px;
 		}
 
 		&.banner__content--alt .banner__inner {
-			padding-left: 20px;
-			padding-right: 120px;
+			padding-left: 220px;
+			padding-right: 150px;
 		}
-	}
-
-	@include breakpoint(mobile) {
-		background-color: rgba(color(primary, darkest), 0.5);
-		height: auto;
-		overflow: hidden;
-		padding: 20px 10px 0;
-
-		.banner__inner {
-			padding: 0 !important;
-			position: relative;
-		}
-
-		.banner__content--background { display: none; }
 	}
 }
 
 [class^="banner__info"] {
 	color: color(gray, off-white);
-	height: 200px;
 	margin-bottom: 10px;
+	min-height: 140px;
 	padding: 20px;
 	width: 100%;
 
 	&.banner__content--alt { color: color(gray, jet); }
+
+	@include breakpoint($screen-sm) {
+		height: 100%;
+		min-height: 200px;
+	}
 }
 
 .banner__info-1 { background: /*linear-gradient(to right, */color(school1, primary)/*, color(school1, secondary))*/; }

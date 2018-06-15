@@ -71,10 +71,6 @@ input[type="reset"],
 	&.button--full-width {
 		width: 100% !important;
 	}
-
-	@include breakpoint(mobile) {
-		//width: 100%;
-	}
 }
 
 .link__alt {

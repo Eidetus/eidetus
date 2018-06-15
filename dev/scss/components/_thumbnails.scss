@@ -85,7 +85,7 @@
 		&:hover { border-color: color(primary, light); }
 	}
 
-	@include breakpoint(mobile) {
+	@include breakpoint($screen-xs) {
 		flex: 1 1 100%;
 	}
 }
