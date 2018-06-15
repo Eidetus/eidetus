@@ -1,0 +1,28 @@
+
+{#
+Global header with page navigation
+@param path - prefix relative path for subpages
+@param class - modifier for alternate header 
+#}
+{% macro header(path, class) %}
+
+<div class="header{% if class %} {{ class }}{% endif %}">
+	<a class="header__logo" href="/">
+		<img src="{{ path }}app/img/header-small.png">
+	</a>
+
+	<div class="nav__container">
+		<div class="nav__toggle">
+			<input class="nav__toggle-switch" type="checkbox" name="nav-toggle">
+			<span class="nav__toggle-icon"></span>
+		</div>
+		<ul class="nav__menu">
+			<li><a href="{{ path }}#media" class="button button__nav--secondary" animate="scroll">Media</a></li>
+			<li><a href="{{ path }}#newsletter" class="button button__nav--primary" animate="scroll">Newsletter</a></li>
+			<li><a href="javascript:void(0)">Blog</a></li>
+			<li><a href="javascript:void(0)">Contact</a></li>
+		</ul>
+	</div>
+</div>
+
+{% endmacro %}

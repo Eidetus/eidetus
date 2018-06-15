@@ -1,3 +1,5 @@
+
+// Gemerate helper classes for padding and margin modifiers
 @include generate_space_helpers();
 
 /// Generates helper classes for each color
@@ -7,4 +9,28 @@
     .color__#{$label}--border { border-color: $value !important; }
     .color__#{$label}--bg { background-color: $value !important; }
   }
+}
+
+.mobile-only {
+	@include breakpoint($screen-xs) { display: none; }
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.opacity-50 {
+	opacity: 0.5;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-upper {
+	text-transform: uppercase;
 }

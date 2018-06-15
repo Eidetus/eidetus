@@ -1,60 +1,58 @@
 .banner {
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-color: color(gray, jet);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
-	min-height: calc(100vh - 20px);
-	padding: 200px 0 0;
+	height: 80vh;
+	margin-top: 71px;
+	padding: 80px 0 0;
 	position: relative;
 	text-align: center;
 
-	&.banner--home {
-		background-image: url('../img/home-hero.jpg');
-	}
+	&.banner--1920 { background-image: url('../img/hero-1920.jpg'); }
+	&.banner--2560 { background-image: url('../img/hero-2560.jpg'); }
+	&.banner--3840 { background-image: url('../img/hero-3840.jpg'); }
 
-	&.banner--eidetus {
-		background-image: url('../img/eidetus-screenshot-10.jpg');
-	}
-
-	.banner__inner {
+	.banner__inner img {
 		animation: reveal-banner 1s 0.25s ease-in-out;
 		animation-fill-mode: forwards;
-		background: rgba(color(mono, white), 0.7);
-		color: color(gray, jet);
+		background: transparent;
+		height: auto;
 		display: inline-block;
+		max-width: 1920px;
 		opacity: 0;
-		padding: 22px;
-		text-align: center;
-
-		h1 {
-			font-family: 'Helvetica', sans-serif;
-			font-weight: 900;
-			letter-spacing: 0.05em;
-			margin: 0;
-		}
-
-		.button { margin: 0; }
+		width: 90vw;
 	}
 
-	.button__icon {
+	.button__icon--container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		background: color(primary, light);
-		border: 0;
-		border-radius: 50%;
 		bottom: 100px;
 		height: 44px;
 		position: absolute;
 		left: calc(50% - 22px);
 		width: 44px;
+	}
 
+	.button__icon {
+		background: color(secondary, light);
+		border: 0;
+		border-radius: 50%;
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	.button__icon--animation {
 		&:before,
 		&:after {
-		    animation-fill-mode: both;
-			background: color(primary, light);
+		    animation-fill-mode: both; 
+			background: color(secondary, light);
 			content: "";
 		    height: 88px;
 		    border-radius: 50%;
@@ -63,7 +61,6 @@
 			top: calc(50% - 44px);
 		    opacity: 0;
 		    width: 88px;
-			z-index: 999;
 		}
 
 		&:before { animation: pulse-ring 1.8s 0.8s ease-out infinite; }
@@ -90,10 +87,130 @@
 		}
 	}
 
-	@include breakpoint(mobile) {
-		background-attachment: scroll;
-		background-size: cover;
+	@include breakpoint($screen-md) {
+		background-attachment: fixed;
+		height: 60vh;
 
-		.banner__inner { display: none; }
+		.banner__inner img {
+			width: 50vw;
+		}
 	}
 }
+
+.banner__full-width {
+	&.banner--byoh { background-color: rgba(color(primary, darkest), 0.25); }
+	&.banner--learn { background-color: rgba(color(primary, light), 0.25); }
+	&.banner--play { background-color: rgba(color(primary, mid), 0.25); }
+	&.banner--tips { background-color: rgba(color(primary, darkest), 0.25); }
+	&.banner--unlock { background-color: rgba(color(primary, light), 0.25); }
+}
+
+.banner__content {
+	background-color: rgba(color(primary, darkest), 0.5);
+	height: auto;
+	margin: 0 0 20px;
+	overflow: hidden;
+	padding: 20px 20px 0;
+	position: relative;
+
+	.banner__inner {
+		padding: 20px 0;
+		position: relative;
+		z-index: 1000;
+	}	
+
+	@include breakpoint($screen-sm) {
+		background-color: transparent;
+		height: 180px;
+
+		.banner__inner {
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
+
+		.banner__content--background {
+			background-image: url('../img/banner-content.png');
+			background-position: center center;
+			background-size: cover;
+			display: block;
+			height: 180px;
+			position: absolute;
+			top: 0;
+			width: 1200px;
+			z-index: 0;
+		}
+
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 130px;
+			padding-right: 30px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 30px;
+			padding-right: 130px;
+		}
+
+		&:not(.banner__content--alt) .banner__content--background { 
+			left: 0;
+		}
+
+		&.banner__content--alt .banner__content--background { 
+			right: 0;
+			transform: scaleX(-1); 
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 180px;
+			padding-right: 130px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 130px;
+			padding-right: 180px;
+		}
+	}
+
+	@include breakpoint($screen-lg) {
+		&:not(.banner__content--alt) .banner__inner {
+			padding-left: 150px;
+			padding-right: 220px;
+		}
+
+		&.banner__content--alt .banner__inner {
+			padding-left: 220px;
+			padding-right: 150px;
+		}
+	}
+}
+
+[class^="banner__info"] {
+	color: color(gray, off-white);
+	margin-bottom: 10px;
+	min-height: 140px;
+	padding: 20px;
+	width: 100%;
+
+	&.banner__content--alt { color: color(gray, jet); }
+
+	@include breakpoint($screen-sm) {
+		height: 100%;
+		min-height: 200px;
+	}
+}
+
+.banner__info-1 { background: /*linear-gradient(to right, */color(school1, primary)/*, color(school1, secondary))*/; }
+.banner__info-2 { background: /*linear-gradient(to right, */color(school2, primary)/*, color(school2, secondary))*/; }
+.banner__info-3 { background: /*linear-gradient(to right, */color(school3, primary)/*, color(school3, secondary))*/; }
+.banner__info-4 { background: /*linear-gradient(to right, */color(school4, primary)/*, color(school4, secondary))*/; }
+.banner__info-5 { background: /*linear-gradient(to right, */color(school5, primary)/*, color(school5, secondary))*/; }
+.banner__info-6 { background: /*linear-gradient(to right, */color(school6, primary)/*, color(school6, secondary))*/; }
+
+.banner__info-attack { background: color(type, attack); }
+.banner__info-defense { background: color(type, defense); }
+.banner__info-utility { background: color(type, utility); }
+
+.banner__info-ability { background: color(type, ability); }
+.banner__info-character { background: color(type, character); }
+.banner__info-movement { background: color(type, movement); }

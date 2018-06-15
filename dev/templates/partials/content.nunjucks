@@ -1,0 +1,75 @@
+
+{#
+Full-width banner with css background image
+@param class - defines background image to be displayed
+#}
+{% macro hero(class) %}
+
+<div class="banner{% if class %} banner--{{ class }}{% endif %}">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}
+
+{#
+Stylized banners to display content headers
+@param name - name of this piece of content
+@param description - brief summary of content
+@param alt - whether to display alternate banner
+#}
+{% macro contentBanner(name, description, alt) %}
+
+<div class="banner__content{% if alt %} banner__content--alt{% endif %}">
+	<div class="banner__inner">
+		<h3 class="text-upper"><strong>{{ name }}</strong></h3>
+		<p>{{ description }}</p>
+	</div>
+	<div class="banner__content--background"></div>
+</div>
+
+{% endmacro %}
+
+{#
+Stylized banners to display important information
+@param ID - defines background image/color
+@param name - name of this piece of information
+@param description - brief summary of info functionality
+#}
+{% macro infoBanner(ID, name, description, alt) %}
+
+<div class="col-xs-12 col-md-4">
+	<div class="banner__info-{{ ID }}{% if alt %} banner__content--alt{% endif %}">
+		<h4><strong>{{ name }}</strong></h4>
+		<p>{{ description }}</p>
+	</div>
+</div>
+
+{% endmacro %}
+
+{#
+Container of cards that can be automatically or manually switched between
+#}
+{% macro carousel() %}
+
+<div class="owl-carousel owl-theme">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}
+
+{#
+Cards for a carousel where only one can be displayed at a time
+#}
+{% macro carousel_card() %}
+
+<div class="item">
+
+{{ caller() }}
+	
+</div>
+
+{% endmacro %}

@@ -1,26 +1,60 @@
-/// Increments of spacing for help classes
-$spaceamounts: (0, 1, 2, 3, 4, 5);
+/// Increments of spacing for helper classes
+$space-amounts: (0, 1, 2, 3, 4, 5);
 
 /// All colors available for elements
 /// Called via color function
 $color-map: (
   primary: (
-    light: #ff8800,
-    dark: #cc6c00
+    lightest: #9cbad4,
+    light: #42688c,
+    mid: #1e3c56,
+    dark: #235570,
+    darkest: #0e293a
   ),
   secondary: (
-    light: #0099ff,
-    dark: #007acc
+    light: #c63837,
+    dark: #651010
   ),
-
+  school1: (
+    primary: #ff8800,
+    secondary: #0077ff
+  ),
+  school2: (
+    primary: #f0f164,
+    secondary: #3b3b63
+  ),
+  school3: (
+    primary: #a76df2,
+    secondary: #6d76f2
+  ),
+  school4: (
+    primary: #ab1818,
+    secondary: #ea4bcb
+  ),
+  school5: (
+    primary: #4dcafb,
+    secondary: #3b004f
+  ),
+  school6: (
+    primary: #b0f9f3,
+    secondary: #2cdb04
+  ),
+  type: (
+    attack: #e13927,
+    defense: #277ee1,
+    utility: #f9d500,
+    ability: #e13927,
+    character: #277ee1,
+    movement: #f9d500,
+  ),
   gray: (
-    off-black: #1c2021,
-    jet: #393939,
-    dark: #7c8081,
-    straight: #c1c0c1,
-    mild: #dad9db,
+    off-white: #f3f6fa,
     light: #e8eef4,
-    off-white: #f3f6fa
+    mild: #dad9db,
+    straight: #c1c0c1,
+    dark: #7c8081,
+    jet: #393939,
+    off-black: #1c2021,
   ),
 
   mono: (
@@ -31,3 +65,18 @@ $color-map: (
 
 /// Maximum width of non-full width content
 $max-width: 1280px;
+
+// Number of columns generated for the grid
+$grid-columns: 12;
+$grid-gutter-width: 0;
+
+// Media query upper sizes
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+$screen-xl: 1920px;
+
+/// Breakpoints.
+/// @var {list}
+//$breakpoints: () !global;

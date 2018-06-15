@@ -22,7 +22,7 @@
 		text-align: center;
 	}
 
-	&.content--top { padding: 73px 0 0; }
+	&.content--top { padding: 70px 0 0; }
 
 	.content__container {
 		margin: 0 auto;
@@ -30,7 +30,26 @@
 		padding: 44px 22px;
 	}
 
-	@include breakpoint(mobile) {
-		&.content--top { padding: 70px 0 0; }
+	.content__image {
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+
+		&.content__image--vertical img {
+			height: 100%;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
+			width: auto;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		&.content--top { padding: 73px 0 0; }
 	}
 }

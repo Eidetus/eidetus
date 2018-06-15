@@ -4,9 +4,225 @@
 
 {% block content %}
 
-	<div style="position: absolute; text-align: center; top: 50%; transform: translateY(-50%); width: 100%;">
-		<h1>Eidetus is currently under construction</h1>
-		<h2>Check back soon for further developments</h2>
+<div class="content">
+	{% call content.hero('1920') %}
+
+	<div class="banner__inner">
+		<img src="{{ relative_path }}app/img/header-default.png">
 	</div>
+
+	<div class="button__icon--container">
+		<a class="button__icon" href="#main" animate="scroll">
+			<i class="button__icon--down-caret"></i>
+		</a>
+		<span class="button__icon--animation"></span>
+	</div>
+
+	{% endcall %}
+
+	<div id="main" class="content__container">
+
+		<p class="text-center">
+			Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you’ve assembled to defeat your opponents.
+		</p>
+
+	</div>
+
+	<div class="banner__full-width banner--byoh">
+		<div class="content__container">
+
+			<div class="text-right marg-bottom-2">
+				<h2 class="marg-bottom-0 text-upper"><strong>B.Y.O.H.</strong></h2>
+				<small class="opacity-50">(Build Your Own Hero!)</small>
+			</div>
+
+			{{ content.contentBanner(
+				'Reveries', 
+				'Deck out your reverie to suit any play style, becoming fierce and formidable, quick and nimble, or tactical and disruptive. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.', 
+				false
+			) }}
+
+			{{ content.contentBanner(
+				'Gear', 
+				'Each psypher can be outfitted with an assortment of items. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.', 
+				true
+			) }}
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--learn">
+		<div class="content__container">
+
+			<h2 class="text-right text-upper"><strong>Learn About</strong></h2>
+
+			{% call content.carousel() %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+			{{ content.contentBanner('Schools', 'Collections of shared memories, each forged from a single significant event. Psyphers can harness the raw emotion from these recollections and channel them into distinct forms as skills.', false) }}
+
+			{{ content.infoBanner(1, 'Shock & Awe', 'Disrupt early on before shifting to powerful finishers') }}
+
+			{{ content.infoBanner(2, 'Light & Dark', 'Empower standard skills with areas of light and darkness', true) }}
+
+			{{ content.infoBanner(3, 'Time & Space', 'Control engagements with position and speed manipulation') }}
+			{#
+			{{ content.infoBanner(4, 'Pain & Pleasure', 'Sacrifice your own health to manipulate life on a grand scale') }}
+			{{ content.infoBanner(5, 'Null & Void', 'Limit opposing skill activations while capitalizing on the inactions') }}
+			{{ content.infoBanner(6, 'Ups & Downs', 'Enhance standard skills with airborne mobility', true) }}
+			#}
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			{{ content.contentBanner('Skills', 'Memories given form to provide offense, defense, or versatility', false) }}
+
+			<div class="flex-row">
+
+			{{ content.infoBanner('attack', 'Attack', 'Precise shots to clustered bombardments, these are the main means of destroying your opponents') }}
+
+			{{ content.infoBanner('defense', 'Defense', 'Directional or encompassing fortifications that provide brief respites from opposing onslaughts') }}
+
+			{{ content.infoBanner('utility', 'Utility', 'Complementary empowerments that aid mobility, damage, and survival', true) }}
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			{{ content.contentBanner('Passives', 'Unlockable augments that enhance your combat effectiveness', false) }}
+
+			<div class="flex-row">
+
+			{{ content.infoBanner('ability', 'Ability', 'Provides additional bonuses to all or a specific set of skills') }}
+
+			{{ content.infoBanner('character', 'Character', 'Cause-and-effect triggers to grant temporary utility') }}
+
+			{{ content.infoBanner('movement', 'Movement', 'Modifications to player mobility', true) }}
+
+			</div>
+
+			{% endcall %}
+
+			{% endcall %}
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--play">
+		<div class="content__container">
+
+			<h2 class="text-right text-upper"><strong>How to Play</strong></h2>
+
+			<div class="flex-row">
+				<div class="col-md-6">
+					<h3>Equip Skills</h3>
+
+					<p>
+						Prior to joining a match, you will have to select one of your reveries. This selection determines which skills will be available to you for the entire match. Upon loading in, you will then be randomly given four skills from your reverie which can be reshuffled for a potentially better starting set. 
+					</p>
+
+					<p>
+						As you play, additional skills will become available. These can be used to overwrite a currently equipped skill to adapt your play style for synergizing with your allies or to better combat the opposing team.
+					</p>
+				</div>
+
+				<div class="col-md-6">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-row">
+				<div class="col-md-6">
+					<div class="content__image content__image--vertical">
+						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<h3>Harvest Resources</h3>
+
+					<p>
+						Throughout the map, remnants of fallen psyphers can be found in the space between each WOMP landing site. In addition, as players inevitably fall against opposing forces, one of these remnants will coalesce. Siphon the stabilizing energy to boost your maximum mana.
+					</p>
+
+					<p>
+						A fusion of ancient technology and volatile energy can be found opposite from the first WOMP. Beware, this relic has drawn the attention of the local creatures and more simple-minded denizens. They must be removed from the area before you can claim the valuable restorative effects.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex-row">
+				<div class="col-md-6">
+					<h3>Claim Victory</h3>
+
+					<p>
+						Each match contains three WOMPs, powerful founts of energy that any psypher can tap into. Each WOMP a team captures guarantees that one-third of the final WOMP will be automatically secured for them. 
+					</p>
+
+					<p>
+						The first will land at a neutral location, providing equal opportunity for both teams. The team that manages to harvest this WOMP will be that much closer to victory. Fret not if you fail to capture the first, as the second WOMP will land closer to the currently losing team. This gives a chance to balance the odds before the third and final WOMP spawns in the center of the map. 
+					</p>
+
+					<p>
+						When a team harvests the third and final WOMP, the match is over and they are victorious.
+					</p>
+				</div>
+
+				<div class="col-md-6">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--tips">
+		<div class="content__container">
+			<h2 class="text-right text-upper"><strong>Gameplay Tips</strong></h2>
+
+			<ul>
+				<li>Combo those skills. One-offs are great, but a series of follow-ups will really turn the tide of a fight.</li>
+				<li>Keep those trigger fingers twitch'n. Get a shot in before they can react, but make sure to raise that defense to block incoming attacks too.</li>
+				<li>WOMPs capture faster with teammates. Stick together and that objective is practically yours.</li>
+				<li>Skills need mana. Stronger skills need even more mana! Raise your max mana from the jungles between each WOMP.</li>
+				<li>Flank and outmanuever the opposing team. Use the overhead structures and underpasses to get the bead on them.</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--unlock">
+		<div class="content__container">
+
+			<h2 class="text-right text-upper"><strong>Unlockables</strong></h2>
+
+			{{ content.contentBanner(
+				'Skills and Passives', 
+				"At each level you earn shards, which can be spent on packs of skills. These packs contain a variety of different skills and passives, with varying levels of prestige and power. Every few levels a bonus pack is earned as well, completely on us!", 
+				false
+			) }}
+
+			{{ content.contentBanner(
+				'Cosmetics', 
+				'These wearable accessories are available to deck out your psyphers. Get the most bang-for-your-shard as you mix and match with various outfits.', 
+				true
+			) }}
+
+		</div>
+	</div>
+</div>
+
 
 {% endblock %}

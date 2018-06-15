@@ -4,11 +4,12 @@
 }
 
 .header {
-	background: linear-gradient(rgba(color(gray, off-black), 0.75), rgba(color(gray, off-black), 0.0));
+	background: linear-gradient(color(primary, darkest), color(primary, dark));
+	border-bottom: 1px solid color(primary, lightest);
 	color: color(mono, white);
 	font-size: 16px;
 	overflow: hidden;
-	padding: 22px 22px 44px;
+	padding: 22px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -16,20 +17,18 @@
 	z-index: 10000;
 
 	&.header--alt {
-		background: color(gray, jet);
+		background: color(primary, darkest);
 		padding: 22px;
 	}
 
-	.header__logo {
-		display: inline-block;
-		font-size: 16px;
-		font-weight: 300;
-		line-height: 16px;
-		margin: 0;
+	.header__logo { 
+		border: none;
 
-		a { color: color(mono, white) !important; }
-
-		span { font-weight: 900; }
+		img {
+			display: inline-block;
+			height: auto;
+			width: 180px;
+		}
 	}
 
 	.nav__container {
@@ -39,7 +38,7 @@
 	}
 
 	.nav__toggle {
-		display: none;
+		display: block;
 		height: 28px;
 		position: absolute;
 		right: 22px;
@@ -89,7 +88,7 @@
 	}
 
 	.nav__menu {
-		display: inline-block;
+		display: none;
 		letter-spacing: 0.075em;
 		margin: 0;
 		text-transform: uppercase;
@@ -98,6 +97,7 @@
 			display: inline-block;
 			font-weight: 600;
 			margin-left: 11px;
+			vertical-align: top;
 
 			a {
 				border: solid 1px transparent;
@@ -118,7 +118,7 @@
 		}
 
 		&.nav__menu--visible {
-			@include breakpoint(mobile) {
+			@include breakpoint($screen-xs) {
 				display: block; 
 				margin: 44px 0 0;
 
@@ -130,11 +130,12 @@
 		}
 	}
 
-	@include breakpoint(mobile) {
-		background: color(gray, jet);
-		padding: 22px;
+	@include breakpoint($screen-sm) {
+		background: linear-gradient(rgba(color(primary, darkest), 1.0), rgba(color(primary, dark), 0.0));
+		border-bottom: none;
+		padding: 22px 22px 44px;
 
-		.nav__toggle { display: block; }
-		.nav__menu { display: none; }
+		.nav__toggle { display: none; }
+		.nav__menu { display: inline-block; }
 	}
 }

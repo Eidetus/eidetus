@@ -1,11 +1,17 @@
+@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
+
 @import
 'utilities/variables',
 'utilities/animations',
 'utilities/mixins',
 'utilities/functions',
 'utilities/settings',
-'utilities/skel',
 'utilities/helpers';
+
+@import
+'overrides/mailchimp',
+'overrides/owlcarousel';
 
 @import
 'globals/body',
@@ -13,17 +19,14 @@
 'globals/footer';
 
 @import
-'components/articles',
 'components/banners',
 'components/buttons',
-'components/cards',
 'components/content',
+'components/grid',
 'components/lists',
-'components/newsletters',
-'components/panels',
-'components/thumbnails',
-'components/wrappers';
+'components/modals',
+'components/thumbnails';
 
 @import
 'pages/404',
-'pages/home'
+'pages/home';
