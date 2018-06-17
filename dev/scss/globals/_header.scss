@@ -118,14 +118,12 @@
 		}
 
 		&.nav__menu--visible {
-			@include breakpoint($screen-xs) {
-				display: block; 
-				margin: 44px 0 0;
+			display: block; 
+			margin: 44px 0 0;
 
-				li {
-					display: block;
-					margin: 22px 0 0;
-				}
+			li {
+				display: block;
+				margin: 22px 0 0;
 			}
 		}
 	}
