@@ -42,6 +42,14 @@
   }
 }
 
+/// Gets index from z-index map
+/// @param {string} $z-index
+@function z-index($index) {
+  @if map-has-key($z-index-map, $index) {
+    @return map-get($z-index-map, $index);
+  }
+}
+
 /// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
 /// @param {string} $svg SVG data URL.
 /// @return {string} Encoded SVG data URL.

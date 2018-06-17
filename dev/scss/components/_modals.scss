@@ -1,59 +1,18 @@
 
-.modal__container {
-	bottom: 0;
-	display: none;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 9998;
-
-	&:before {
-		background-color: rgba(color(mono, black), 0.75);
-		bottom: 0;
-		content: "";
-		left: 0;
-		position: fixed;
-		right: 0;
-		top: 0;
-		z-index: 9998;
-	}
+.tingle-modal-box {
+	background-color: color(primary, dark);
 }
 
-.modal {
-	background-color: color(gray, jet);
-	left: 50%;
-	max-width: 100%;
-	padding: 22px;
-	position: fixed;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 400px;
-	z-index: 9999;
+.tingle-modal__close {
+	height: 60px;
+	line-height: 60px;
 
-	.modal__button--close {
-		color: color(gray, light);
-		cursor: pointer;
-		font-weight: 700;
-		height: 20px;
-		line-height: 20px;
-		position: absolute;
-		right: 0;
-		text-align: center;
-		top: 0;
-		transition: all 0.1s linear;
-		width: 20px;
-
-		.material-icons {
-			font-size: 20px;
-		}
-
-		&:hover {
-			color: darken(color(gray, light), 20);
-		}
+	.tingle-modal__closeIcon {
+		font-size: 32px;
+		vertical-align: top;
 	}
-}
-
-.modal--visible {
-	display: block;
+	.tingle-modal__closeLabel {
+		font-size: 24px;
+		vertical-align: top;
+	}
 }

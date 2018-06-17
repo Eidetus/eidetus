@@ -1,5 +1,6 @@
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min';
 @import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min';
+@import '../../node_modules/tingle.js/dist/tingle.min';
 
 @import
 'utilities/variables',
@@ -24,8 +25,7 @@
 'components/content',
 'components/grid',
 'components/lists',
-'components/modals',
-'components/thumbnails';
+'components/modals';
 
 @import
 'pages/404',

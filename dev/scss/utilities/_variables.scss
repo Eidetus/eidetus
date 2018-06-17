@@ -1,6 +1,17 @@
 /// Increments of spacing for helper classes
 $space-amounts: (0, 1, 2, 3, 4, 5);
 
+/// All vertical indices available for elements
+/// Called via z-index function
+$z-index-map: (
+  body: 1,
+  banner: 50,
+  banner-icon: 51,
+  header: 100,
+  header-toggle: 101,
+  modal: 1000
+);
+
 /// All colors available for elements
 /// Called via color function
 $color-map: (
@@ -77,6 +88,3 @@ $screen-md: 1024px;
 $screen-lg: 1366px;
 $screen-xl: 1920px;
 
-/// Breakpoints.
-/// @var {list}
-//$breakpoints: () !global;

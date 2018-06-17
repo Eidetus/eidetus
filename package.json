@@ -46,6 +46,7 @@
   "false": {},
   "dependencies": {
     "jquery": "^3.3.1",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "tingle.js": "^0.13.2"
   }
 }
