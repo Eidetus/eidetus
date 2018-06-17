@@ -1,30 +1,17 @@
 
-// Display modal container associated to clicked button
-$(document).on('click', '[reveal-modal]', function(e) {
-	e.preventDefault();
-
-	// Get reveal modal data attribute value
-	var modalID = $(this).attr('reveal-modal');
-
-	// Find modal container with matching ID
-	var modal = $(document).find('#' + modalID);
-
-	// Display modal container
-	modal.addClass('modal--visible');
-
-	// Prevent undesired scrolling in body
-	$('body').css({'overflow': 'hidden'});
-	
+var newsletterModal = new tingle.modal({
+    onClose: function() {},
+    onOpen: function() {},
+    beforeOpen: function() {},
+    beforeClose: function() { return true; },
+    cssClass: []
 });
 
-$(document).on('click', '[close-modal]', function(e) {
-	// Ensure the clicked element is able to close modal (avoids propagation)
-	if (!e.originalEvent.srcElement.hasAttribute('close-modal')) { return; }
+var btn = document.querySelector('[modal-ID="newsletter-modal"]');
 
-	// Find modal container with matching ID
-	var modal = $(document).find('.modal--visible').removeClass('modal--visible');
-
-	// Renable scrolling in body
-	$('body').css({'overflow': 'auto'});
-	
+// Event listener that opens modal with associated content based on data attributes
+btn.addEventListener('click', function() {
+    newsletterModal.open();
+    var content = document.querySelector('[modal-content="newsletter-modal"]');
+    newsletterModal.setContent(content ? content.innerHTML : '<h2>Unable to load content</h2>');
 });

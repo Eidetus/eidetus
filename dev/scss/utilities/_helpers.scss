@@ -15,6 +15,10 @@
 	@include breakpoint($screen-xs) { display: none; }
 }
 
+.hide {
+	display: none !important;
+}
+
 .bold {
 	font-weight: 700;
 }
