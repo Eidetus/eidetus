@@ -136,15 +136,15 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
 					</div>
 				</div>
 			</div>
 
 			<div class="flex-row">
 				<div class="col-md-6">
-					<div class="content__image content__image--vertical">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-resources.jpg">
 					</div>
 				</div>
 
@@ -180,7 +180,7 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+						<img src="{{ relative_path }}app/img/learn-objectives.jpg">
 					</div>
 				</div>
 			</div>
