@@ -136,15 +136,15 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
 					</div>
 				</div>
 			</div>
 
 			<div class="flex-row">
-				<div class="col-md-6">
-					<div class="content__image content__image--vertical">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+				<div class="col-md-6 hide-on-mobile">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-resources.jpg">
 					</div>
 				</div>
 
@@ -158,6 +158,12 @@
 					<p>
 						A fusion of ancient technology and volatile energy can be found opposite from the first WOMP. Beware, this relic has drawn the attention of the local creatures and more simple-minded denizens. They must be removed from the area before you can claim the valuable restorative effects.
 					</p>
+				</div>
+
+				<div class="col-md-6 mobile-only">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-resources.jpg">
+					</div>
 				</div>
 			</div>
 
@@ -180,7 +186,7 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/hero-1920.jpg">
+						<img src="{{ relative_path }}app/img/learn-objectives.jpg">
 					</div>
 				</div>
 			</div>
