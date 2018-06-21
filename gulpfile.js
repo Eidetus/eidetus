@@ -145,6 +145,13 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images Complete!', onLast: true }))
 });
 
+// Move video files
+gulp.task('videos', function() {
+  return gulp.src(config.src + 'vid/*')    
+    .pipe(gulp.dest(config.dest + 'vid'))
+    .pipe(notify({ message: 'Videos Complete!', onLast: true }))
+});
+
 // Watch specified folders and files for any changes
 gulp.task('watch', function(){
   gulp.watch(config.src + 'img/**/*', ['images']);
@@ -171,7 +178,7 @@ gulp.task('prod', function(callback) {
 gulp.task('default', function(callback) {
   sequence(
     'clean',
-    ['images', 'scripts', 'sass', 'nunjucks'],
+    ['videos', 'images', 'scripts', 'sass', 'nunjucks'],
     ['sync', 'watch']
   )
 });
