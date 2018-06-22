@@ -36,7 +36,7 @@
 
 	</div>
 
-	<div class="banner__full-width banner--byoh">
+	<div class="banner__full-width">
 		<div class="content__container">
 
 			<div class="text-right marg-bottom-2">
@@ -59,7 +59,7 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--learn">
+	<div class="banner__full-width banner--alt">
 		<div class="content__container">
 
 			<h2 class="text-right text-upper"><strong>Learn About</strong></h2>
@@ -124,7 +124,7 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--play">
+	<div class="banner__full-width">
 		<div class="content__container">
 
 			<h2 class="text-right text-upper"><strong>How to Play</strong></h2>
@@ -202,7 +202,131 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--tips">
+	<div class="banner__full-width banner--alt">
+		<div class="content__container">
+
+			<h2 class="text-right text-upper"><strong>Masteries</strong></h2>
+
+			{% call content.carousel() %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+				<div class="col-md-4">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<h3>Deck Building</h3>
+
+					<p>
+						Devise inventive combinations of skills that dovetail effectively in combat in a reverie
+					</p>
+				</div>
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+				<div class="col-md-4">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<h3>Twitch shooting</h3>
+
+					<p>
+						Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.
+					</p>
+				</div>
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+				<div class="col-md-4">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-objectives.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<h3>Team-based objective gaming</h3>
+
+					<p>
+						Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.
+					</p>
+				</div>
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+				<div class="col-md-4">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-resources.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<h3>Resource management</h3>
+
+					<p>
+						Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.
+					</p>
+				</div>
+
+			</div>
+
+			{% endcall %}
+
+			{% call content.carousel_card() %}
+
+			<div class="flex-row">
+
+				<div class="col-md-4">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<h3>Character and skill customization</h3>
+
+					<p>
+						Design a character that suits your play style, vision, and team’s needs.
+					</p>
+				</div>
+
+			</div>
+
+			{% endcall %}
+
+			{% endcall %}
+
+		</div>
+	</div>
+
+	{#
+
+	<div class="banner__full-width banner--alt">
 		<div class="content__container">
 			<h2 class="text-right text-upper"><strong>Gameplay Tips</strong></h2>
 
@@ -217,7 +341,9 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--unlock">
+	#}
+
+	<div class="banner__full-width">
 		<div class="content__container">
 
 			<h2 class="text-right text-upper"><strong>Unlockables</strong></h2>

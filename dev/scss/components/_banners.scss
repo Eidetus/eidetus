@@ -129,11 +129,9 @@
 }
 
 .banner__full-width {
-	&.banner--byoh { background-color: rgba(color(primary, darkest), 0.25); }
-	&.banner--learn { background-color: rgba(color(primary, light), 0.25); }
-	&.banner--play { background-color: rgba(color(primary, mid), 0.25); }
-	&.banner--tips { background-color: rgba(color(primary, darkest), 0.25); }
-	&.banner--unlock { background-color: rgba(color(primary, light), 0.25); }
+	background-color: rgba(color(primary, darkest), 0.25);
+
+	&.banner--alt { background-color: rgba(color(primary, mid), 0.25); }
 }
 
 .banner__content {
