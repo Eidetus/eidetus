@@ -1,6 +1,25 @@
 
+.tingle-modal--no-padding .tingle-modal-box__content {	
+	padding: 0;
+}
+
 .tingle-modal-box {
 	background-color: color(primary, dark);
+}
+
+.tingle-modal-box__content {
+	.video-modal__container {
+		padding-top: 56.25%;
+		position: relative;
+	}
+
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
 }
 
 .tingle-modal__close {

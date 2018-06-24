@@ -1,17 +1,22 @@
 
-var newsletterModal = new tingle.modal({
-    onClose: function() {},
-    onOpen: function() {},
-    beforeOpen: function() {},
-    beforeClose: function() { return true; },
-    cssClass: []
-});
+document.querySelectorAll('[modal-ID]').forEach(function(button) {
+    var modalID = button.getAttribute('modal-ID');
 
-var btn = document.querySelector('[modal-ID="newsletter-modal"]');
+    // Remove padding from modal for trailer/video content
+    var modalClass = (modalID == "trailer-modal") ? "tingle-modal--no-padding" : "tingle-modal--default";
 
-// Event listener that opens modal with associated content based on data attributes
-btn.addEventListener('click', function() {
-    newsletterModal.open();
-    var content = document.querySelector('[modal-content="newsletter-modal"]');
-    newsletterModal.setContent(content ? content.innerHTML : '<h2>Unable to load content</h2>');
+    // Event listener that opens modal with associated content based on data attributes
+    button.addEventListener('click', function() {
+        var modal = new tingle.modal({
+            onClose: function() {},
+            onOpen: function() {},
+            beforeOpen: function() {},
+            beforeClose: function() { return true; },
+            cssClass: [modalClass]
+        });
+
+        modal.open();
+        var content = document.querySelector('[modal-content="' + modalID + '"]');
+        modal.setContent(content ?  content.innerHTML : '<h2 class="text-center text-upper">Unable to load content</h2>');
+    });
 });

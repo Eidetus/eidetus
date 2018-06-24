@@ -5,56 +5,137 @@
 {% block content %}
 
 <div class="content">
-	{% call content.hero('1920') %}
+	<div class="banner">
 
-	<div class="banner__inner">
-		<img src="{{ relative_path }}app/img/header-default.png">
-	</div>
+		<video class="banner__video" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="{{ relative_path }}app/vid/hero.mp4" type="video/mp4">
+		</video>
 
-	<div class="button__icon--container">
-		<a class="button__icon" href="#main" animate="scroll">
-			<i class="button__icon--down-caret"></i>
-		</a>
-		<span class="button__icon--animation"></span>
-	</div>
-
-	{% endcall %}
-
-	<div id="main" class="content__container">
-
-		<p class="text-center">
-			Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you’ve assembled to defeat your opponents.
-		</p>
-
-	</div>
-
-	<div class="banner__full-width banner--byoh">
-		<div class="content__container">
-
-			<div class="text-right marg-bottom-2">
-				<h2 class="marg-bottom-0 text-upper"><strong>B.Y.O.H.</strong></h2>
-				<small class="opacity-50">(Build Your Own Hero!)</small>
+		<div class="banner__overlay">
+			
+			<div class="banner__inner">
+				<img src="{{ relative_path }}app/img/header-default.png">
 			</div>
 
+			<div class="banner__overlay--button-container">
+				{#<a class="button" modal-ID="trailer-modal">Watch Trailer</a>
+				{% call content.modal('trailer-modal') %}
+
+				<div class="video-modal__container">
+					<iframe 
+						frameborder="0" 
+						allowfullscreen
+						src="https://www.youtube.com/embed/[insert YouTube video ID]?autoplay=1"
+					></iframe>
+				</div>
+
+				{% endcall %}#}
+				<div class="button__icon--container">
+					<a class="button__icon" href="#main" animate="scroll">
+						<i class="button__icon--down-caret"></i>
+					</a>
+					<span class="button__icon--animation"></span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="banner__full-width" style="border: none; margin-bottom: 128px;">
+		<img class="banner--video-footer" src="{{ relative_path }}app/img/banner-video.png">
+	</div>
+
+	<div class="banner__full-width">
+		<div id="main" class="content__container">
+
+			<p class="text-center">
+				Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you've assembled to defeat your opponents.
+			</p>
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--alt">
+		<div class="content__container">
+
+			
+			<h2 class="text-center text-upper">
+				<small class="marg-bottom-0 text-upper">- To Win -</small>
+				<strong>You Must Master</strong>
+			</h2>
+			
 			{{ content.contentBanner(
-				'Reveries', 
-				'Deck out your reverie to suit any play style, becoming fierce and formidable, quick and nimble, or tactical and disruptive. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.', 
-				false
+				'B.Y.O.H.', 
+				"Design a character that suits your play style, vision, and team's needs.", 
+				false,
+				"byoh",
+				"(Build Your Own Hero)"
+			) }}
+			
+			{{ content.contentBanner(
+				'Team-based Objectives', 
+				"Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.", 
+				true,
+				"team"
 			) }}
 
 			{{ content.contentBanner(
-				'Gear', 
-				'Each psypher can be outfitted with an assortment of items. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.', 
-				true
+				'Deck Building', 
+				"Devise inventive combinations of skills that dovetail effectively in combat in a reverie.", 
+				false,
+				"deck"
+			) }}
+			
+			{{ content.contentBanner(
+				'Resource Management', 
+				"Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.", 
+				true,
+				"resource"
+			) }}
+			
+			{{ content.contentBanner(
+				'Twitch Shooting', 
+				"Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.", 
+				false,
+				"twitch"
 			) }}
 
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--learn">
+	<div class="banner__full-width">
 		<div class="content__container">
 
-			<h2 class="text-right text-upper"><strong>Learn About</strong></h2>
+			<div class="text-center marg-bottom-2">
+				<h2 class="marg-bottom-0 text-upper"><strong>B.Y.O.H.</strong></h2>
+				<small class="opacity-50">(Build Your Own Hero)</small>
+			</div>
+
+			{{ content.contentBanner(
+				'Psyphers', 
+				"You're a psypher trying to survive in a post-apocalyptic cityscape, the forgotten remnants left far beneath the elites who fled the virus. Infected with Eidetus, you're on the hunt for your own memories. To stay alive and find the truth, you'll need to defeat the other psyphers encroaching on your territory by channeling the memories you do have into psychic power.", 
+				false
+			) }}
+
+			{{ content.contentBanner(
+				'Reveries', 
+				'Deck out your reverie to suit any play style, becoming fierce and formidable, quick and nimble, or tactical and disruptive. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.', 
+				true
+			) }}
+
+			{{ content.contentBanner(
+				'Gear', 
+				'Each psypher can be outfitted with an assortment of items. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.', 
+				false
+			) }}
+
+		</div>
+	</div>
+
+	<div class="banner__full-width banner--alt">
+		<div class="content__container">
+
+			<h2 class="text-center text-upper"><strong>Learn About</strong></h2>
 
 			{% call content.carousel() %}
 
@@ -116,10 +197,10 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--play">
+	<div class="banner__full-width">
 		<div class="content__container">
 
-			<h2 class="text-right text-upper"><strong>How to Play</strong></h2>
+			<h2 class="text-center text-upper"><strong>How to Play</strong></h2>
 
 			<div class="flex-row">
 				<div class="col-md-6">
@@ -194,9 +275,11 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--tips">
+	{#
+
+	<div class="banner__full-width banner--alt">
 		<div class="content__container">
-			<h2 class="text-right text-upper"><strong>Gameplay Tips</strong></h2>
+			<h2 class="text-center text-upper"><strong>Gameplay Tips</strong></h2>
 
 			<ul>
 				<li>Combo those skills. One-offs are great, but a series of follow-ups will really turn the tide of a fight.</li>
@@ -209,10 +292,12 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--unlock">
+	#}
+
+	<div class="banner__full-width">
 		<div class="content__container">
 
-			<h2 class="text-right text-upper"><strong>Unlockables</strong></h2>
+			<h2 class="text-center text-upper"><strong>Unlockables</strong></h2>
 
 			{{ content.contentBanner(
 				'Skills and Passives', 

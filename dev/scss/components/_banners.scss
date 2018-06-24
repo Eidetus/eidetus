@@ -1,39 +1,60 @@
 .banner {
-	background-attachment: scroll;
-	background-color: color(gray, jet);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
-	height: 80vh;
-	margin-top: 71px;
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow: hidden;
 	padding: 80px 0 0;
 	position: relative;
 	text-align: center;
 
-	&.banner--1920 { background-image: url('../img/hero-1920.jpg'); }
-	&.banner--2560 { background-image: url('../img/hero-2560.jpg'); }
-	&.banner--3840 { background-image: url('../img/hero-3840.jpg'); }
+	.banner__video {
+		left: 25%;
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-25%) translateY(-50%);
+	}
 
-	.banner__inner img {
-		animation: reveal-banner 1s 0.25s ease-in-out;
-		animation-fill-mode: forwards;
-		background: transparent;
-		height: auto;
-		display: inline-block;
-		max-width: 1920px;
-		opacity: 0;
-		width: 90vw;
+	.banner__overlay {
+		background-color: rgba(color(mono, black), 0.5);
+		bottom: 0;
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+		right: 0;
+	}
+
+	.banner__inner {
+		margin-top: 20vh;
+
+		img {
+			animation: reveal-banner 1s 0.25s ease-in-out;
+			animation-fill-mode: forwards;
+			background: transparent;
+			height: auto;
+			display: inline-block;
+			max-width: 1920px;
+			opacity: 0;
+			width: 90vw;
+		}
+	}
+
+	.banner__overlay--button-container {
+		animation: lower-on-load 0.8s 0.0s ease-in-out;
+		animation-fill-mode: both;
+		bottom: 15vh;
+		left: calc(50% - 100px);
+		position: absolute;
+		transform: translateX(-50%);
+		width: 200px;
 	}
 
 	.button__icon--container {
-		animation: lower-on-load 0.8s 0.0s ease-in-out;
-		animation-fill-mode: both;
-		bottom: 5%;
 		height: 44px;
-		position: absolute;
-		left: calc(50% - 22px);
+		position: relative;
+		margin: 0 auto;
 		width: 44px;
 	}
 
@@ -88,48 +109,44 @@
 	}
 
 	@include breakpoint($screen-md) {
-		background-attachment: fixed;
-		height: 60vh;
+		.banner__inner {
+			margin-top: 10vh;
 
-		.banner__inner img {
-			width: 50vw;
+			img { width: 50vw; }
+		}
+
+		.banner__overlay--button-container {
+			bottom: 20vh;
 		}
 	}
 }
 
 .banner__full-width {
-	&.banner--byoh { background-color: rgba(color(primary, darkest), 0.25); }
-	&.banner--learn { background-color: rgba(color(primary, light), 0.25); }
-	&.banner--play { background-color: rgba(color(primary, mid), 0.25); }
-	&.banner--tips { background-color: rgba(color(primary, darkest), 0.25); }
-	&.banner--unlock { background-color: rgba(color(primary, light), 0.25); }
+	border-bottom: 1px solid color(primary, lightest);
+	position: relative;
+
+	.banner--video-footer {
+		left: 50%;
+		position: absolute;
+		top: -128px;
+		transform: translateX(-50%);
+	}
 }
 
 .banner__content {
-	background-color: rgba(color(primary, darkest), 0.5);
+	background-color: color(primary, mid);
 	height: auto;
 	margin: 0 0 20px;
 	overflow: hidden;
 	padding: 20px 20px 0;
 	position: relative;
 
-	.banner__inner {
-		padding: 20px 0;
-		position: relative;
-		z-index: z-index(banner);
-	}	
-
 	@include breakpoint($screen-sm) {
 		background-color: transparent;
 		height: 180px;
 
-		.banner__inner {
-			padding-bottom: 20px;
-			padding-top: 20px;
-		}
-
 		.banner__content--background {
-			background-image: url('../img/banner-content.png');
+			background-image: url('../img/banner-content-blank.png');
 			background-position: center center;
 			background-size: cover;
 			display: block;
@@ -139,49 +156,110 @@
 			width: 1200px;
 			z-index: z-index(body);
 		}
-
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 130px;
-			padding-right: 30px;
-		}
-
-		&.banner__content--alt .banner__inner {
-			padding-left: 30px;
-			padding-right: 130px;
-		}
-
-		&:not(.banner__content--alt) .banner__content--background { 
+		&:not(.banner__content--flip) .banner__content--background { 
 			left: 0;
 		}
-
-		&.banner__content--alt .banner__content--background { 
+		&.banner__content--flip .banner__content--background { 
 			right: 0;
 			transform: scaleX(-1); 
 		}
+
+		.banner__inner {
+			position: relative;
+			width: 100%;
+			z-index: z-index(banner);
+		}
+
+		@include breakpoint($screen-sm) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 130px;
+				padding-right: 30px;
+			}
+			&.banner__content--flip .banner__inner {
+				padding-left: 30px;
+				padding-right: 130px;
+			}
+		}
+
+		@include breakpoint($screen-md) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 180px;
+				padding-right: 130px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 130px;
+				padding-right: 180px;
+			}
+		}
+
+		@include breakpoint($screen-lg) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 150px;
+				padding-right: 220px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 220px;
+				padding-right: 150px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 220px;
+				padding-right: 150px;
+			}
+		}
+	}
+}
+
+.banner__content--byoh .banner__content--background { 
+	background-image: url('../img/banner-content-byoh.png'); 
+}
+.banner__content--deck .banner__content--background { 
+	background-image: url('../img/banner-content-deck.png'); 
+}
+.banner__content--resource .banner__content--background { 
+	background-image: url('../img/banner-content-resource.png'); 
+}
+.banner__content--team .banner__content--background { 
+	background-image: url('../img/banner-content-team.png'); 
+}
+.banner__content--twitch .banner__content--background { 
+	background-image: url('../img/banner-content-twitch.png'); 
+}
+
+.banner__content--byoh,
+.banner__content--deck,
+.banner__content--resource,
+.banner__content--team,
+.banner__content--twitch {
+	.banner__inner {
+		@include breakpoint($screen-sm) {
+			padding: 0 !important;
+			position: absolute;
+			text-shadow: 1px 1px color(mono, black);
+			width: 316px;
+
+			p { font-size: 14px; }
+		}
 	}
 
-	@include breakpoint($screen-md) {
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 180px;
-			padding-right: 130px;
+	&:not(.banner__content--flip) .banner__inner {
+		@include breakpoint($screen-sm) { 
+			right: 20px;
+			text-align: right;
+
+			p { text-align: right; }
 		}
 
-		&.banner__content--alt .banner__inner {
-			padding-left: 130px;
-			padding-right: 180px;
-		}
+		@include breakpoint($screen-md) { right: 100px; }
+		@include breakpoint($screen-lg) { right: 130px; }
 	}
 
-	@include breakpoint($screen-lg) {
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 150px;
-			padding-right: 220px;
-		}
-
-		&.banner__content--alt .banner__inner {
-			padding-left: 220px;
-			padding-right: 150px;
-		}
+	&.banner__content--flip .banner__inner {
+		@include breakpoint($screen-sm) { left: 20px; }
+		@include breakpoint($screen-md) { left: 100px; }
+		@include breakpoint($screen-lg) { left: 130px; }
 	}
 }
 
@@ -200,12 +278,12 @@
 	}
 }
 
-.banner__info-1 { background: /*linear-gradient(to right, */color(school1, primary)/*, color(school1, secondary))*/; }
-.banner__info-2 { background: /*linear-gradient(to right, */color(school2, primary)/*, color(school2, secondary))*/; }
-.banner__info-3 { background: /*linear-gradient(to right, */color(school3, primary)/*, color(school3, secondary))*/; }
-.banner__info-4 { background: /*linear-gradient(to right, */color(school4, primary)/*, color(school4, secondary))*/; }
-.banner__info-5 { background: /*linear-gradient(to right, */color(school5, primary)/*, color(school5, secondary))*/; }
-.banner__info-6 { background: /*linear-gradient(to right, */color(school6, primary)/*, color(school6, secondary))*/; }
+.banner__info-1 { background: color(school1, primary); }
+.banner__info-2 { background: color(school2, primary); }
+.banner__info-3 { background: color(school3, primary); }
+.banner__info-4 { background: color(school4, primary); }
+.banner__info-5 { background: color(school5, primary); }
+.banner__info-6 { background: color(school6, primary); }
 
 .banner__info-attack { background: color(type, attack); }
 .banner__info-defense { background: color(type, defense); }
