@@ -78,16 +78,10 @@ Cards for a carousel where only one can be displayed at a time
 {% endmacro %}
 
 {#
-Social media and newsletter sign-up form
+Social media links
 @param path - prefix relative path for subpages
 #}
 {% macro social_links(path) %}
-
-<h2 id="newsletter" class="text-upper text-center"><strong>Get Connected</strong></h2>
-
-<div class="text-center">
-	<a class="button" modal-ID="newsletter-modal">Lose your mind to Eidetus!</a>
-</div>
 
 <div class="marg-bottom-2 text-center">
 	<ul class="buttons">

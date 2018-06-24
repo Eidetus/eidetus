@@ -18,7 +18,11 @@
 
     {% block content %} {% endblock %}
 
-    {{ content.social_links(relative_path) }}
+    <h2 id="newsletter" class="text-upper text-center"><strong>Get Connected</strong></h2>
+
+    <div class="text-center">
+      <a class="button" modal-ID="newsletter-modal">Lose your mind to Eidetus!</a>
+    </div>
 
     {% call content.modal('newsletter-modal') %}
 
@@ -33,6 +37,8 @@
     </div>
 
     {% endcall %}
+
+    {{ content.social_links(relative_path) }}
 
     {{ footer.footer(relative_path) }}
   }
