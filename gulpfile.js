@@ -169,6 +169,8 @@ gulp.task('prod', function(callback) {
   isProd = true;
 
   sequence(
+    ['clean'],
+    ['videos', 'images'],
     ['default'],
     callback
   )
@@ -177,8 +179,7 @@ gulp.task('prod', function(callback) {
 // Executes a sequence of tasks
 gulp.task('default', function(callback) {
   sequence(
-    'clean',
-    ['videos', 'images', 'scripts', 'sass', 'nunjucks'],
+    ['scripts', 'sass', 'nunjucks'],
     ['sync', 'watch']
   )
 });
