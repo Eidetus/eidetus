@@ -12,13 +12,13 @@
 }
 
 .mobile-only {
-	@include breakpoint($screen-xs) { display: none; }
+	@include breakpoint($screen-sm) { display: none; }
 }
 
 .hide-on-mobile {
 	display: none;
 
-	@include breakpoint($screen-xs) { display: block; }
+	@include breakpoint($screen-sm) { display: block; }
 }
 
 .hide {

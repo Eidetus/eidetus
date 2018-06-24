@@ -28,12 +28,14 @@
 
 	</div>
 
-	<div id="main" class="content__container">
+	<div class="banner__full-width">
+		<div id="main" class="content__container">
 
-		<p class="text-center">
-			Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you’ve assembled to defeat your opponents.
-		</p>
+			<p class="text-center">
+				Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you’ve assembled to defeat your opponents.
+			</p>
 
+		</div>
 	</div>
 
 	<div class="banner__full-width">

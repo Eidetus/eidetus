@@ -3,12 +3,12 @@
 @include boxModel('border');
 
 body {
-	background: color(primary, dark);
-
-	&.overlay--open {
-		max-height: 100vh;
-		overflow: hidden;
-	}
+	background: color(primary, darkest);
+	background: linear-gradient(
+		to right,
+		color(primary, darkest), 
+		darken(color(primary, darkest), 1), 
+		darken(color(primary, darkest), 10));
 }
 
 body, 
