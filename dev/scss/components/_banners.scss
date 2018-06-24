@@ -1,12 +1,13 @@
 .banner {
 	color: color(gray, jet);
 	cursor: default;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100vh;
+	min-height: 400px;
 	overflow: hidden;
 	padding: 80px 0 0;
 	position: relative;
 	text-align: center;
+	width: 100vw;
 
 	.banner__video {
 		left: 25%;
@@ -27,7 +28,7 @@
 	}
 
 	.banner__inner {
-		margin-top: 20vh;
+		margin-top: 100px;
 
 		img {
 			animation: reveal-banner 1s 0.25s ease-in-out;
@@ -44,7 +45,7 @@
 	.banner__overlay--button-container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		bottom: 15vh;
+		bottom: 20vh;
 		left: calc(50% - 100px);
 		position: absolute;
 		transform: translateX(-50%);
@@ -114,10 +115,6 @@
 
 			img { width: 50vw; }
 		}
-
-		.banner__overlay--button-container {
-			bottom: 20vh;
-		}
 	}
 }
 
@@ -127,9 +124,11 @@
 
 	.banner--video-footer {
 		left: 50%;
+		min-width: 1280px;
 		position: absolute;
-		top: -128px;
-		transform: translateX(-50%);
+		top: 0;
+		transform: translateX(-50%) translateY(-50%);
+    	width: 100vw;
 	}
 }
 
