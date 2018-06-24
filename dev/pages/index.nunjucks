@@ -42,6 +42,54 @@
 		</div>
 	</div>
 
+	<div class="banner__full-width banner--alt">
+		<div class="content__container">
+
+			
+			<h2 class="text-center text-upper">
+				<small class="marg-bottom-0 text-upper">- To Win -</small>
+				<strong>You Must Master</strong>
+			</h2>
+			
+			{{ content.contentBanner(
+				'B.Y.O.H.', 
+				"Design a character that suits your play style, vision, and team’s needs.", 
+				false,
+				"byoh",
+				"(Build Your Own Hero)"
+			) }}
+			
+			{{ content.contentBanner(
+				'Team-based Objectives', 
+				"Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.", 
+				true,
+				"team"
+			) }}
+
+			{{ content.contentBanner(
+				'Deck Building', 
+				"Devise inventive combinations of skills that dovetail effectively in combat in a reverie.", 
+				false,
+				"deck"
+			) }}
+			
+			{{ content.contentBanner(
+				'Resource Management', 
+				"Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.", 
+				true,
+				"resource"
+			) }}
+			
+			{{ content.contentBanner(
+				'Twitch Shooting', 
+				"Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.", 
+				false,
+				"twitch"
+			) }}
+
+		</div>
+	</div>
+
 	<div class="banner__full-width">
 		<div class="content__container">
 
@@ -204,54 +252,6 @@
 					</div>
 				</div>
 			</div>
-
-		</div>
-	</div>
-
-	<div class="banner__full-width banner--alt">
-		<div class="content__container">
-
-			
-			<h2 class="text-center text-upper">
-				<small class="marg-bottom-0 text-upper">- To Win -</small>
-				<strong>You Must Master</strong>
-			</h2>
-			
-			{{ content.contentBanner(
-				'B.Y.O.H.', 
-				"Design a character that suits your play style, vision, and team’s needs.", 
-				false,
-				"byoh",
-				"(Build Your Own Hero)"
-			) }}
-			
-			{{ content.contentBanner(
-				'Team-based Objectives', 
-				"Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.", 
-				true,
-				"team"
-			) }}
-
-			{{ content.contentBanner(
-				'Deck Building', 
-				"Devise inventive combinations of skills that dovetail effectively in combat in a reverie.", 
-				false,
-				"deck"
-			) }}
-			
-			{{ content.contentBanner(
-				'Resource Management', 
-				"Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.", 
-				true,
-				"resource"
-			) }}
-			
-			{{ content.contentBanner(
-				'Twitch Shooting', 
-				"Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.", 
-				false,
-				"twitch"
-			) }}
 
 		</div>
 	</div>
