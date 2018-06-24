@@ -36,7 +36,7 @@
 		<div id="main" class="content__container">
 
 			<p class="text-center">
-				Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you’ve assembled to defeat your opponents.
+				Eidetus is a strategic, team-based BYOH (Build-Your-Own-Hero) shooter set in a dystopian sci-fi landscape. While your psypher channels memories into psychic power, draw from the deck of abilities you've assembled to defeat your opponents.
 			</p>
 
 		</div>
@@ -53,7 +53,7 @@
 			
 			{{ content.contentBanner(
 				'B.Y.O.H.', 
-				"Design a character that suits your play style, vision, and team’s needs.", 
+				"Design a character that suits your play style, vision, and team's needs.", 
 				false,
 				"byoh",
 				"(Build Your Own Hero)"
@@ -99,15 +99,21 @@
 			</div>
 
 			{{ content.contentBanner(
+				'Psyphers', 
+				"You're a psypher trying to survive in a post-apocalyptic cityscape, the forgotten remnants left far beneath the elites who fled the virus. Infected with Eidetus, you're on the hunt for your own memories. To stay alive and find the truth, you'll need to defeat the other psyphers encroaching on your territory by channeling the memories you do have into psychic power.", 
+				false
+			) }}
+
+			{{ content.contentBanner(
 				'Reveries', 
 				'Deck out your reverie to suit any play style, becoming fierce and formidable, quick and nimble, or tactical and disruptive. Each reverie consists of thirty skills and three passives, providing a canvas for a variety of skill combinations.', 
-				false
+				true
 			) }}
 
 			{{ content.contentBanner(
 				'Gear', 
 				'Each psypher can be outfitted with an assortment of items. With memories becoming fluid and fleeting, many cosmetics are odd items repurposed as wearable equipment.', 
-				true
+				false
 			) }}
 
 		</div>
