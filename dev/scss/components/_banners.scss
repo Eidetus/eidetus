@@ -1,9 +1,4 @@
 .banner {
-	//background-attachment: scroll;
-	//background-color: rgba(color(primary, darkest), 0.25);;
-	//background-position: center;
-	//background-repeat: no-repeat;
-	//background-size: cover;
 	color: color(gray, jet);
 	cursor: default;
 	min-height: 100vh;
@@ -12,10 +7,6 @@
 	padding: 80px 0 0;
 	position: relative;
 	text-align: center;
-
-	&.banner--1920 { background-image: url('../img/hero-1920.jpg'); }
-	&.banner--2560 { background-image: url('../img/hero-2560.jpg'); }
-	&.banner--3840 { background-image: url('../img/hero-3840.jpg'); }
 
 	.banner__video {
 		left: 25%;
@@ -53,7 +44,7 @@
 	.button__icon--container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		bottom: 10vh;
+		bottom: 15vh;
 		height: 44px;
 		position: absolute;
 		left: calc(50% - 22px);
@@ -111,15 +102,10 @@
 	}
 
 	@include breakpoint($screen-md) {
-		//background-attachment: fixed;
-		//height: 60vh;
-
 		.banner__inner {
 			margin-top: 10vh;
 
-			img {
-				width: 50vw;
-			}
+			img { width: 50vw; }
 		}
 
 		.button__icon--container {
@@ -130,9 +116,14 @@
 
 .banner__full-width {
 	border-bottom: 1px solid color(primary, lightest);
-	//background-color: color(primary, dark);
+	position: relative;
 
-	//&.banner--alt { background-color: rgba(color(primary, darkest), 0.25); }
+	.banner--video-footer {
+		left: 50%;
+		position: absolute;
+		top: -128px;
+		transform: translateX(-50%);
+	}
 }
 
 .banner__content {
