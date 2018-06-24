@@ -41,13 +41,20 @@
 		}
 	}
 
-	.button__icon--container {
+	.banner__overlay--button-container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
 		bottom: 15vh;
-		height: 44px;
+		left: calc(50% - 100px);
 		position: absolute;
-		left: calc(50% - 22px);
+		transform: translateX(-50%);
+		width: 200px;
+	}
+
+	.button__icon--container {
+		height: 44px;
+		position: relative;
+		margin: 0 auto;
 		width: 44px;
 	}
 
@@ -108,7 +115,7 @@
 			img { width: 50vw; }
 		}
 
-		.button__icon--container {
+		.banner__overlay--button-container {
 			bottom: 20vh;
 		}
 	}

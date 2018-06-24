@@ -76,3 +76,41 @@ Cards for a carousel where only one can be displayed at a time
 </div>
 
 {% endmacro %}
+
+{#
+Social media and newsletter sign-up form
+@param path - prefix relative path for subpages
+#}
+{% macro social_links(path) %}
+
+<h2 id="newsletter" class="text-upper text-center"><strong>Get Connected</strong></h2>
+
+<div class="text-center">
+	<a class="button" modal-ID="newsletter-modal">Lose your mind to Eidetus!</a>
+</div>
+
+<div class="marg-bottom-2 text-center">
+	<ul class="buttons">
+		<li><a class="footer__social-link" target="_blank" href="https://www.facebook.com/eidetus"><img src="{{ path }}app/img/icon-social-facebook.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://www.instagram.com/eidetus/"><img src="{{ path }}app/img/icon-social-instagram.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://twitter.com/eidetus"><img src="{{ path }}app/img/icon-social-twitter.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://www.youtube.com/channel/UCfYoz2i0xDxTJ7hoYtRK5Tw"><img src="{{ path }}app/img/icon-social-youtube.png"></a></li>
+		<li><a class="footer__social-link" target="_blank" href="https://www.reddit.com/r/Eidetus/"><img src="{{ path }}app/img/icon-social-reddit.png"></a></li>
+	</ul>
+</div>
+
+{% endmacro %}
+
+{#
+Modal container with supplied content in caller
+@param ID - alphanumerical identifier to link modal button with content
+#}
+{% macro modal(ID) %}
+
+<div class="hide" modal-content="{{ ID }}">
+
+{{ caller() }}
+
+</div>
+
+{% endmacro %}

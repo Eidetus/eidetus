@@ -17,15 +17,28 @@
 				<img src="{{ relative_path }}app/img/header-default.png">
 			</div>
 
-			<div class="button__icon--container">
-				<a class="button__icon" href="#main" animate="scroll">
-					<i class="button__icon--down-caret"></i>
-				</a>
-				<span class="button__icon--animation"></span>
+			<div class="banner__overlay--button-container">
+				{#<a class="button" modal-ID="trailer-modal">Watch Trailer</a>
+				{% call content.modal('trailer-modal') %}
+
+				<div class="video-modal__container">
+					<iframe 
+						frameborder="0" 
+						allowfullscreen
+						src="https://www.youtube.com/embed/[insert YouTube video ID]?autoplay=1"
+					></iframe>
+				</div>
+
+				{% endcall %}#}
+				<div class="button__icon--container">
+					<a class="button__icon" href="#main" animate="scroll">
+						<i class="button__icon--down-caret"></i>
+					</a>
+					<span class="button__icon--animation"></span>
+				</div>
 			</div>
 
 		</div>
-
 	</div>
 
 	<div class="banner__full-width" style="border: none; margin-bottom: 128px;">
