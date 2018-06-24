@@ -142,23 +142,12 @@
 	padding: 20px 20px 0;
 	position: relative;
 
-	.banner__inner {
-		padding: 20px 0;
-		position: relative;
-		z-index: z-index(banner);
-	}	
-
 	@include breakpoint($screen-sm) {
 		background-color: transparent;
 		height: 180px;
 
-		.banner__inner {
-			padding-bottom: 20px;
-			padding-top: 20px;
-		}
-
 		.banner__content--background {
-			background-image: url('../img/banner-content.png');
+			background-image: url('../img/banner-content-blank.png');
 			background-position: center center;
 			background-size: cover;
 			display: block;
@@ -168,49 +157,109 @@
 			width: 1200px;
 			z-index: z-index(body);
 		}
-
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 130px;
-			padding-right: 30px;
-		}
-
-		&.banner__content--alt .banner__inner {
-			padding-left: 30px;
-			padding-right: 130px;
-		}
-
-		&:not(.banner__content--alt) .banner__content--background { 
+		&:not(.banner__content--flip) .banner__content--background { 
 			left: 0;
 		}
-
-		&.banner__content--alt .banner__content--background { 
+		&.banner__content--flip .banner__content--background { 
 			right: 0;
 			transform: scaleX(-1); 
 		}
+
+		.banner__inner {
+			padding: 20px 0;
+			position: relative;
+			width: 100%;
+			z-index: z-index(banner);
+		}
+
+		@include breakpoint($screen-sm) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 130px;
+				padding-right: 30px;
+			}
+			&.banner__content--flip .banner__inner {
+				padding-left: 30px;
+				padding-right: 130px;
+			}
+		}
+
+		@include breakpoint($screen-md) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 180px;
+				padding-right: 130px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 130px;
+				padding-right: 180px;
+			}
+		}
+
+		@include breakpoint($screen-lg) {
+			&:not(.banner__content--flip) .banner__inner {
+				padding-left: 150px;
+				padding-right: 220px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 220px;
+				padding-right: 150px;
+			}
+
+			&.banner__content--flip .banner__inner {
+				padding-left: 220px;
+				padding-right: 150px;
+			}
+		}
+	}
+}
+
+.banner__content--byoh .banner__content--background { 
+	background-image: url('../img/banner-content-byoh.png'); 
+}
+.banner__content--deck .banner__content--background { 
+	background-image: url('../img/banner-content-deck.png'); 
+}
+.banner__content--resource .banner__content--background { 
+	background-image: url('../img/banner-content-resource.png'); 
+}
+.banner__content--team .banner__content--background { 
+	background-image: url('../img/banner-content-team.png'); 
+}
+.banner__content--twitch .banner__content--background { 
+	background-image: url('../img/banner-content-twitch.png'); 
+}
+
+.banner__content--byoh,
+.banner__content--deck,
+.banner__content--resource,
+.banner__content--team,
+.banner__content--twitch {
+	.banner__inner {
+		@include breakpoint($screen-sm) {
+			padding: 0 !important;
+			position: absolute;
+			text-shadow: 1px 1px color(mono, black);
+			width: 316px;
+
+			p { font-size: 14px; }
+		}
 	}
 
-	@include breakpoint($screen-md) {
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 180px;
-			padding-right: 130px;
-		}
+	&:not(.banner__content--flip) .banner__inner {
+		text-align: right;
 
-		&.banner__content--alt .banner__inner {
-			padding-left: 130px;
-			padding-right: 180px;
-		}
+		p { text-align: right; }
+
+		@include breakpoint($screen-sm) { right: 20px; }
+		@include breakpoint($screen-md) { right: 100px; }
+		@include breakpoint($screen-lg) { right: 130px; }
 	}
 
-	@include breakpoint($screen-lg) {
-		&:not(.banner__content--alt) .banner__inner {
-			padding-left: 150px;
-			padding-right: 220px;
-		}
-
-		&.banner__content--alt .banner__inner {
-			padding-left: 220px;
-			padding-right: 150px;
-		}
+	&.banner__content--flip .banner__inner {
+		@include breakpoint($screen-sm) { left: 20px; }
+		@include breakpoint($screen-md) { left: 100px; }
+		@include breakpoint($screen-lg) { left: 130px; }
 	}
 }
 
@@ -229,12 +278,12 @@
 	}
 }
 
-.banner__info-1 { background: /*linear-gradient(to right, */color(school1, primary)/*, color(school1, secondary))*/; }
-.banner__info-2 { background: /*linear-gradient(to right, */color(school2, primary)/*, color(school2, secondary))*/; }
-.banner__info-3 { background: /*linear-gradient(to right, */color(school3, primary)/*, color(school3, secondary))*/; }
-.banner__info-4 { background: /*linear-gradient(to right, */color(school4, primary)/*, color(school4, secondary))*/; }
-.banner__info-5 { background: /*linear-gradient(to right, */color(school5, primary)/*, color(school5, secondary))*/; }
-.banner__info-6 { background: /*linear-gradient(to right, */color(school6, primary)/*, color(school6, secondary))*/; }
+.banner__info-1 { background: color(school1, primary); }
+.banner__info-2 { background: color(school2, primary); }
+.banner__info-3 { background: color(school3, primary); }
+.banner__info-4 { background: color(school4, primary); }
+.banner__info-5 { background: color(school5, primary); }
+.banner__info-6 { background: color(school6, primary); }
 
 .banner__info-attack { background: color(type, attack); }
 .banner__info-defense { background: color(type, defense); }

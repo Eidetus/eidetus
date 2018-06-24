@@ -41,7 +41,7 @@
 
 			<div class="text-right marg-bottom-2">
 				<h2 class="marg-bottom-0 text-upper"><strong>B.Y.O.H.</strong></h2>
-				<small class="opacity-50">(Build Your Own Hero!)</small>
+				<small class="opacity-50">(Build Your Own Hero)</small>
 			</div>
 
 			{{ content.contentBanner(
@@ -205,121 +205,42 @@
 	<div class="banner__full-width banner--alt">
 		<div class="content__container">
 
-			<h2 class="text-right text-upper"><strong>Masteries</strong></h2>
+			<h2 class="text-right text-upper"><strong>You Must Master</strong></h2>
+			
+			{{ content.contentBanner(
+				'B.Y.O.H.', 
+				"Design a character that suits your play style, vision, and team’s needs.", 
+				false,
+				"byoh"
+			) }}
+			
+			{{ content.contentBanner(
+				'Team-based Objectives', 
+				"Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.", 
+				true,
+				"team"
+			) }}
 
-			{% call content.carousel() %}
-
-			{% call content.carousel_card() %}
-
-			<div class="flex-row">
-
-				<div class="col-md-4">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-skills.jpg">
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<h3>Deck Building</h3>
-
-					<p>
-						Devise inventive combinations of skills that dovetail effectively in combat in a reverie
-					</p>
-				</div>
-
-			</div>
-
-			{% endcall %}
-
-			{% call content.carousel_card() %}
-
-			<div class="flex-row">
-
-				<div class="col-md-4">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-skills.jpg">
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<h3>Twitch shooting</h3>
-
-					<p>
-						Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.
-					</p>
-				</div>
-
-			</div>
-
-			{% endcall %}
-
-			{% call content.carousel_card() %}
-
-			<div class="flex-row">
-
-				<div class="col-md-4">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-objectives.jpg">
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<h3>Team-based objective gaming</h3>
-
-					<p>
-						Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.
-					</p>
-				</div>
-
-			</div>
-
-			{% endcall %}
-
-			{% call content.carousel_card() %}
-
-			<div class="flex-row">
-
-				<div class="col-md-4">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-resources.jpg">
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<h3>Resource management</h3>
-
-					<p>
-						Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.
-					</p>
-				</div>
-
-			</div>
-
-			{% endcall %}
-
-			{% call content.carousel_card() %}
-
-			<div class="flex-row">
-
-				<div class="col-md-4">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-skills.jpg">
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<h3>Character and skill customization</h3>
-
-					<p>
-						Design a character that suits your play style, vision, and team’s needs.
-					</p>
-				</div>
-
-			</div>
-
-			{% endcall %}
-
-			{% endcall %}
+			{{ content.contentBanner(
+				'Deck Building', 
+				"Devise inventive combinations of skills that dovetail effectively in combat in a reverie.", 
+				false,
+				"deck"
+			) }}
+			
+			{{ content.contentBanner(
+				'Resource Management', 
+				"Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.", 
+				true,
+				"resource"
+			) }}
+			
+			{{ content.contentBanner(
+				'Twitch Shooting', 
+				"Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.", 
+				false,
+				"twitch"
+			) }}
 
 		</div>
 	</div>
