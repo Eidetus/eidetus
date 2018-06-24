@@ -221,7 +221,8 @@
 				'B.Y.O.H.', 
 				"Design a character that suits your play style, vision, and team’s needs.", 
 				false,
-				"byoh"
+				"byoh",
+				"(Build Your Own Hero)"
 			) }}
 			
 			{{ content.contentBanner(
