@@ -11,6 +11,10 @@ body {
 		darken(color(primary, darkest), 10));
 }
 
+body.tingle-enabled {
+	background: color(primary, darkest) !important;
+}
+
 body, 
 input, 
 select, 
