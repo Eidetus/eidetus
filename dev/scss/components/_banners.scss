@@ -31,7 +31,7 @@
 	}
 
 	.banner__overlay {
-		background-color: rgba(color(mono, black), 0.5);
+		background: linear-gradient(to bottom, color(primary, darkest), transparent, transparent);
 		bottom: 0;
 		min-height: 100%;
 		min-width: 100%;
