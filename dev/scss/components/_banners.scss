@@ -144,13 +144,23 @@
 	border-bottom: 1px solid color(primary, lightest);
 	position: relative;
 
-	.banner--video-footer {
-		left: 50%;
-		min-width: 1280px;
-		position: absolute;
-		top: 0;
-		transform: translateX(-50%) translateY(-50%);
-    	width: 100vw;
+	&.banner--video-footer {
+
+		img {
+			left: 50%;
+			min-width: 1280px;
+			position: absolute;
+			top: 0;
+			transform: translateX(-50%) translateY(-50%);
+	    	width: 100vw;
+	    }
+
+	    h2 {
+	    	left: 50%;
+	    	position: absolute;
+	    	top: 0;
+	    	transform: translateX(-50%) translateY(-50%);
+	    }
 	}
 }
 
