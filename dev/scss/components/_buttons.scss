@@ -24,7 +24,7 @@ input[type="reset"],
   	text-overflow: ellipsis;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in-out;
-	white-space: nowrap;  
+	//white-space: nowrap;  
 
 	&:hover {
 		background: lighten(color(secondary, light), 5);
