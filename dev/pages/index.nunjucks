@@ -58,7 +58,7 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width banner--alt">
+	<div class="banner__full-width">
 		<div class="content__container">
 
 			
@@ -69,36 +69,36 @@
 			
 			{{ content.contentBanner(
 				'B.Y.O.H.', 
-				"Design a character that suits your play style, vision, and team's needs.", 
+				"Design a Pyspher that suits your play style, psychic visions, and team's needs. You do you, boo.", 
 				false,
 				"byoh",
 				"(Build Your Own Hero)"
 			) }}
 			
 			{{ content.contentBanner(
-				'Team-based Objectives', 
-				"Compose and cooperate as a successful team unit, supporting each other to effectively implement a strategy by which you control territory and claim vital resources.", 
+				'Team-Based Objectives', 
+				"Okay, so there is an &quot;I&quot; in Eidetus, but there's also a &quot;U.&quot; In order to win, you gotta work together with your Psypher pals. You'll need to cooperate and strategize with each other so you can claim your territory.", 
 				true,
 				"team"
 			) }}
 
 			{{ content.contentBanner(
 				'Deck Building', 
-				"Devise inventive combinations of skills that dovetail effectively in combat in a reverie.", 
+				"Rock out with your deck out. Devise inventive combinations of skills that dovetail effectively in combat. Since Eidetus is esoteric AF and this game's all about memory, decks are called &quot;reveries&quot; here.", 
 				false,
 				"deck"
 			) }}
 			
 			{{ content.contentBanner(
 				'Resource Management', 
-				"Understand and utilize the game map and enemy movements to obtain control of the assets you need to win.", 
+				"Embrace your inner capitalist and suck up all the resources! All is fair in laissez faire. Understand and utilize the game map and enemy movements to gain control of the assets you need to win.", 
 				true,
 				"resource"
 			) }}
 			
 			{{ content.contentBanner(
 				'Twitch Shooting', 
-				"Rapidly, effectively coordinate offensive and defensive strategies to accurately position yourself, hit targets, and evade enemies in real time.", 
+				"Give in to that nervous tick and flickshot your way to victory. Quick reaction speeds and precision aim will put you ahead of your Psypher peers. But don't get carpal tunnel. ", 
 				false,
 				"twitch"
 			) }}
@@ -106,7 +106,7 @@
 		</div>
 	</div>
 
-	<div class="banner__full-width">
+	{#<div class="banner__full-width">
 		<div class="content__container">
 
 			<div class="text-center marg-bottom-2">
@@ -133,9 +133,9 @@
 			) }}
 
 		</div>
-	</div>
+	</div>#}
 
-	<div class="banner__full-width banner--alt">
+	{#<div class="banner__full-width">
 		<div class="content__container">
 
 			<h2 class="text-center text-upper"><strong>Learn About</strong></h2>
@@ -153,11 +153,11 @@
 			{{ content.infoBanner(2, 'Light & Dark', 'Empower standard skills with areas of light and darkness', true) }}
 
 			{{ content.infoBanner(3, 'Time & Space', 'Control engagements with position and speed manipulation') }}
-			{#
+			
 			{{ content.infoBanner(4, 'Pain & Pleasure', 'Sacrifice your own health to manipulate life on a grand scale') }}
 			{{ content.infoBanner(5, 'Null & Void', 'Limit opposing skill activations while capitalizing on the inactions') }}
 			{{ content.infoBanner(6, 'Ups & Downs', 'Enhance standard skills with airborne mobility', true) }}
-			#}
+			
 
 			</div>
 
@@ -198,7 +198,7 @@
 			{% endcall %}
 
 		</div>
-	</div>
+	</div>#}
 
 	<div class="banner__full-width">
 		<div class="content__container">
@@ -210,11 +210,11 @@
 					<h3>Equip Skills</h3>
 
 					<p>
-						Prior to joining a match, you will have to select one of your reveries. This selection determines which skills will be available to you for the entire match. Upon loading in, you will then be randomly given four skills from your reverie which can be reshuffled for a potentially better starting set. 
+						Before joining a match, you'll select one of your reveries (decks). Choose wisely, since the reverie you pick will determine which skills are available to you for the entire match (no take-backsies). Upon entering the game, you will randomly be given four skills from your reverie which you may then reshuffle for a potentially better starting set. 
 					</p>
 
 					<p>
-						As you play, additional skills will become available. These can be used to overwrite a currently equipped skill to adapt your play style for synergizing with your allies or to better combat the opposing team.
+						As you play, you'll unlock additional skills (upgrade!). These can be used to overwrite a currently equipped skill so you can adapt your play style to synergize with your allies or better combat the opposing team.
 					</p>
 				</div>
 
@@ -236,11 +236,11 @@
 					<h3>Harvest Resources</h3>
 
 					<p>
-						Throughout the map, remnants of fallen psyphers can be found in the space between each WOMP landing site. In addition, as players inevitably fall against opposing forces, one of these remnants will coalesce. Siphon the stabilizing energy to boost your maximum mana.
+						Find and collect the strange crystals strewn about the world, increasing your maximum power as a Psypher. As you kick your enemies butts with mind-lasers and vaporize them with psychic blasts, you can collect their residual energies for your own nefarious purposes.
 					</p>
 
 					<p>
-						A fusion of ancient technology and volatile energy can be found opposite from the first WOMP. Beware, this relic has drawn the attention of the local creatures and more simple-minded denizens. They must be removed from the area before you can claim the valuable restorative effects.
+						Health shrines can be found far from the action (you gotta work for ‘em) and only give their blessing after performing the intricate ritual of… standing next to it for 10 seconds. But beware, these relics draw the attention of the local creatures and more simple-minded denizens. These heathens must be removed from the area before you can claim the shrine's valuable restorative effects.
 					</p>
 				</div>
 
@@ -256,15 +256,11 @@
 					<h3>Claim Victory</h3>
 
 					<p>
-						Each match contains three WOMPs, powerful founts of energy that any psypher can tap into. Each WOMP a team captures guarantees that one-third of the final WOMP will be automatically secured for them. 
+						The main objective of Eidetus is to capture the massive sources of energy called WOMPs (named by the locals for the, er, pleasant sound they make upon contact with the ground) before the opposing Psypher team does. Every captured WOMP leading up to the final one improves your chance to win the battle with huge gains in mana and lower capture time. 
 					</p>
 
 					<p>
-						The first will land at a neutral location, providing equal opportunity for both teams. The team that manages to harvest this WOMP will be that much closer to victory. Fret not if you fail to capture the first, as the second WOMP will land closer to the currently losing team. This gives a chance to balance the odds before the third and final WOMP spawns in the center of the map. 
-					</p>
-
-					<p>
-						When a team harvests the third and final WOMP, the match is over and they are victorious.
+						There are 6 randomized WOMP spawn locations around the battlefield, with the last WOMP landing dead-center in the middle of it all for the no-holds-barred finale, where the winning team takes all!
 					</p>
 				</div>
 
@@ -278,9 +274,63 @@
 		</div>
 	</div>
 
+	<div class="banner__full-width">
+		<div class="content__container">
+
+			<h2 class="text-center text-upper"><strong>A Truly Forgettable Narrative</strong></h2>
+
+			<div class="flex-row">
+				<div class="col-md-12">
+					<p>
+						No one remembers how this all started, and that's the problem.
+					</p>
+
+					<p>
+						The mind-altering virus known as &quot;Eidetus&quot; stripped the memories of all who were left on the surface while the elites escaped aboveground to their floating fortress. Thus, crazy powerful (but also crazy absent-minded) Psyphers roam the surface. 
+					</p>
+				</div>
+
+				{#<div class="col-md-12">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>#}
+
+				<div class="col-md-12">
+					<p>
+						They can't retain memories, but they can whoop some butt. They have no idea where their keys are, they definitely left the oven on, and they will never, ever find the remote. But best believe they will blow you up with a fireball or rain down some lightning on your punk ass.
+					</p>
+				</div>
+
+				{#<div class="col-md-12">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>#}
+
+				<div class="col-md-12">
+					<p>
+						To stay alive and find the truth (but probably not those keys), you'll need to defeat the other Psyphers encroaching on your territory by channeling the memories you do have into psychic power.
+					</p>
+
+					<p>
+						You're on the hunt for your own memories, and no one better get in your way.
+					</p>
+				</div>
+
+				{#<div class="col-md-12">
+					<div class="content__image">
+						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+					</div>
+				</div>#}
+			</div>
+
+		</div>
+	</div>
+
 	{#
 
-	<div class="banner__full-width banner--alt">
+	<div class="banner__full-width">
 		<div class="content__container">
 			<h2 class="text-center text-upper"><strong>Gameplay Tips</strong></h2>
 
@@ -297,7 +347,7 @@
 
 	#}
 
-	<div class="banner__full-width">
+	{#<div class="banner__full-width">
 		<div class="content__container">
 
 			<h2 class="text-center text-upper"><strong>Unlockables</strong></h2>
@@ -315,7 +365,7 @@
 			) }}
 
 		</div>
-	</div>
+	</div>#}
 </div>
 
 

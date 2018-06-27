@@ -40,6 +40,10 @@
 
     {% endcall %}
 
+    <p class="text-center">
+      Don't forget to follow <strong>@Eidetus</strong> on all social media for the latest updates on our upcoming game.
+    </p>
+
     {{ content.social_links(relative_path) }}
 
     {{ footer.footer(relative_path) }}
