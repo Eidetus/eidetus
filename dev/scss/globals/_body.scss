@@ -2,6 +2,10 @@
 @include reset('full');
 @include boxModel('border');
 
+html {
+	background: url("../img/background.jpg");
+}
+
 body {
 	background: color(primary, darkest);
 	background: linear-gradient(
