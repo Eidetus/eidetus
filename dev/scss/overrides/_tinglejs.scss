@@ -1,13 +1,16 @@
+
 .tingle-modal {
 	background: rgba(color(mono, black), 0.8);
 }
 
-.tingle-modal--no-padding .tingle-modal-box__content {	
-	padding: 0;
+.tingle-modal--video .tingle-modal-box__content {	
+	max-width: 100%;
+	padding: 0;	
 }
 
 .tingle-modal-box {
 	background-color: color(primary, dark);
+	max-width: 800px;
 }
 
 .tingle-modal-box__content {

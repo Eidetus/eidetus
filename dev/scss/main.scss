@@ -12,7 +12,8 @@
 
 @import
 'overrides/mailchimp',
-'overrides/owlcarousel';
+'overrides/owlcarousel',
+'overrides/tinglejs';
 
 @import
 'globals/body',
@@ -24,8 +25,7 @@
 'components/buttons',
 'components/content',
 'components/grid',
-'components/lists',
-'components/modals';
+'components/lists';
 
 @import
 'pages/404',
