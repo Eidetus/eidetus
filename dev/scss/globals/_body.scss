@@ -6,9 +6,9 @@ body {
 	background: color(primary, darkest);
 	background: linear-gradient(
 		to right,
-		color(primary, darkest), 
-		darken(color(primary, darkest), 1), 
-		darken(color(primary, darkest), 10));
+		rgba(darken(color(primary, darkest), 10), 0.9),
+		rgba(color(primary, darkest), 0.5), 
+		rgba(darken(color(primary, darkest), 10), 0.9));
 }
 
 body.tingle-enabled {

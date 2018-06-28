@@ -9,14 +9,20 @@
 	text-align: center;
 	width: 100vw;
 
-	.banner__hero--image,
-	.banner__hero--video {
+	.banner__hero--image {
 		left: 25%;
 		min-height: 100%;
 		min-width: 100%;
 		position: absolute;
 		top: 50%;
 		transform: translateX(-25%) translateY(-50%);
+	}
+
+	.banner__hero--video {
+		height: auto;
+		min-width: 100%;
+		position: relative;
+		width: 100%;
 	}
 
 	.banner__hero--image {
@@ -122,6 +128,9 @@
 	}
 
 	@include breakpoint($screen-sm) {
+		height: auto;
+		min-height: 0px;
+
 		.banner__hero--image {
 			display: none;
 		}
@@ -129,13 +138,21 @@
 		.banner__hero--video {
 			display: block;
 		}
-	}
-
-	@include breakpoint($screen-md) {
+		
 		.banner__inner {
 			margin-top: 10vh;
 
 			img { width: 50vw; }
+		}
+
+		.banner__overlay--button-container {
+			bottom: 10vh;
+		}
+	}
+
+	@include breakpoint($screen-xl) {
+		.banner__overlay--button-container {
+			bottom: 20vh;
 		}
 	}
 }
