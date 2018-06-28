@@ -161,7 +161,13 @@
 	border-bottom: 1px solid color(primary, lightest);
 	position: relative;
 
+	&.banner__full-width--alt {
+		background-color: rgba(darken(color(primary, darkest), 20), 0.5);
+	}
+
 	&.banner--video-footer {
+		border: none;
+		z-index: z-index(banner-icon);
 
 		img {
 			left: 50%;
