@@ -1,6 +1,6 @@
 .footer {
-	background: darken(color(primary, darkest), 12.5);
-	border: 0;
+	background: linear-gradient(lighten(color(primary, darkest), 10), darken(color(primary, darkest), 10));
+	border-top: 1px solid color(primary, lightest);
 	bottom: 0;
 	padding: 22px 0;
 	overflow: hidden;

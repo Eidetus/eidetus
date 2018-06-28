@@ -4,7 +4,7 @@
 }
 
 .header {
-	background: linear-gradient(color(primary, darkest), color(primary, dark));
+	background: linear-gradient(darken(color(primary, darkest), 10), lighten(color(primary, darkest), 10));
 	border-bottom: 1px solid color(primary, lightest);
 	color: color(mono, white);
 	font-size: 16px;
@@ -23,11 +23,14 @@
 
 	.header__logo { 
 		border: none;
+		display: inline-block;
+		height: 30px;
+		overflow: hidden;
 
 		img {
 			display: inline-block;
-			height: auto;
-			width: 180px;
+			height: 30px;
+			width: auto;
 		}
 	}
 
@@ -96,6 +99,8 @@
 		li {
 			display: inline-block;
 			font-weight: 600;
+			height: 30px;
+			line-height: 30px;
 			margin-left: 11px;
 			vertical-align: top;
 
@@ -129,9 +134,9 @@
 	}
 
 	@include breakpoint($screen-sm) {
-		background: linear-gradient(rgba(color(primary, darkest), 1.0), rgba(color(primary, dark), 0.0));
-		border-bottom: none;
-		padding: 22px 22px 44px;
+		height: 54px;
+		padding: 11px 22px;
+		position: fixed;
 
 		.nav__toggle { display: none; }
 		.nav__menu { display: inline-block; }
