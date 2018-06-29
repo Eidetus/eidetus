@@ -6,6 +6,7 @@
 
 // Custom JavaScript partials
 // =require partials/carousel.js
+// =require partials/copyright.js
 // =require partials/footer.js
 // =require partials/header.js
 // =require partials/modal.js
