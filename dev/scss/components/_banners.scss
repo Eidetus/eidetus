@@ -130,6 +130,7 @@
 	@include breakpoint($screen-sm) {
 		height: auto;
 		min-height: 0px;
+		padding: 55px 0 0;
 
 		.banner__hero--image {
 			display: none;
