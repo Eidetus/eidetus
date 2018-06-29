@@ -189,34 +189,38 @@
 }
 
 .banner__content {
-	background-color: color(primary, mid);
+	background-color: rgba(color(primary, mid), 0.6);
 	height: auto;
 	margin: 0 0 20px;
 	overflow: hidden;
-	padding: 20px 20px 0;
+	padding: 200px 20px 0;
 	position: relative;
+
+	.banner__content--background {
+		background-image: url('../img/banner-content-blank.png');
+		background-position: center center;
+		background-size: cover;
+		display: block;
+		height: 180px;
+		position: absolute;
+		top: 0;
+		width: 1200px;
+		z-index: z-index(body);
+	}
 
 	@include breakpoint($screen-sm) {
 		background-color: transparent;
 		height: 180px;
-
-		.banner__content--background {
-			background-image: url('../img/banner-content-blank.png');
-			background-position: center center;
-			background-size: cover;
-			display: block;
-			height: 180px;
-			position: absolute;
-			top: 0;
-			width: 1200px;
-			z-index: z-index(body);
-		}
+		padding: 20px 20px 0;
+		
 		&:not(.banner__content--flip) .banner__content--background { 
-			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 		&.banner__content--flip .banner__content--background { 
-			right: 0;
-			transform: scaleX(-1); 
+			left: unset;
+			right: 50%;
+			transform: scaleX(-1) translateX(-50%);
 		}
 
 		.banner__inner {
@@ -268,19 +272,29 @@
 }
 
 .banner__content--byoh .banner__content--background { 
-	background-image: url('../img/banner-content-byoh.png'); 
+	background-image: url('../img/banner-content-byoh.png');
+	left: 60%;
+	transform: translateX(-60%);
 }
 .banner__content--deck .banner__content--background { 
 	background-image: url('../img/banner-content-deck.png'); 
+	left: 50%;
+	transform: translateX(-50%);
 }
 .banner__content--resource .banner__content--background { 
 	background-image: url('../img/banner-content-resource.png'); 
+	left: 50%;
+	transform: translateX(-50%);
 }
 .banner__content--team .banner__content--background { 
 	background-image: url('../img/banner-content-team.png'); 
+	left: 35%;
+	transform: translateX(-35%);
 }
 .banner__content--twitch .banner__content--background { 
 	background-image: url('../img/banner-content-twitch.png'); 
+	left: 30%;
+	transform: translateX(-30%);
 }
 
 .banner__content--byoh,
