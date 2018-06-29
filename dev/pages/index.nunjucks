@@ -223,7 +223,7 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+						<img src="{{ relative_path }}app/img/how-to-play_skills.png">
 					</div>
 				</div>
 			</div>
@@ -233,12 +233,6 @@
 			{% call content.carousel_card() %}
 
 			<div class="flex-row">
-				{#<div class="col-md-6 hide-on-mobile">
-					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-resources.jpg">
-					</div>
-				</div>#}
-
 				<div class="col-md-6">
 					<h3>Harvest Resources</h3>
 
@@ -253,7 +247,7 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-resources.jpg">
+						<img src="{{ relative_path }}app/img/how-to-play_resources.png">
 					</div>
 				</div>
 			</div>
@@ -277,7 +271,7 @@
 
 				<div class="col-md-6">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-objectives.jpg">
+						<img src="{{ relative_path }}app/img/how-to-play_victory.png">
 					</div>
 				</div>
 			</div>

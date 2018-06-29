@@ -25,7 +25,7 @@ Stylized banners to display content headers
 
 <div class="banner__content{% if flip %} banner__content--flip{% endif %}{% if class %} banner__content--{{ class }}{% endif %}">
 	<div class="banner__inner">
-		<h3 class="text-upper{% if class == 'byoh' %} marg-bottom-0{% endif %}"><strong>{{ name }}</strong></h3>
+		<h3 class="text-upper{% if subname %} marg-bottom-0{% endif %}"><strong>{{ name }}</strong></h3>
 		{% if subname %}<small class="opacity-50">{{ subname }}</small>{% endif %}
 		<p>{{ description }}</p>
 	</div>
