@@ -211,7 +211,7 @@
 	@include breakpoint($screen-sm) {
 		background-color: transparent;
 		height: 180px;
-		padding: 20px 20px 0;
+		padding: 0 20px;
 		
 		&:not(.banner__content--flip) .banner__content--background { 
 			left: 50%;
@@ -224,51 +224,52 @@
 		}
 
 		.banner__inner {
+			padding: 20px 0 0;
 			position: relative;
 			width: 100%;
 			z-index: z-index(banner);
 		}
+	}
 
-		@include breakpoint($screen-sm) {
-			&:not(.banner__content--flip) .banner__inner {
-				padding-left: 130px;
-				padding-right: 30px;
-			}
-			&.banner__content--flip .banner__inner {
-				padding-left: 30px;
-				padding-right: 130px;
-			}
+	@include breakpoint($screen-sm) {
+		&:not(.banner__content--flip) .banner__inner {
+			padding-left: 130px;
+			padding-right: 30px;
 		}
-
-		@include breakpoint($screen-md) {
-			&:not(.banner__content--flip) .banner__inner {
-				padding-left: 180px;
-				padding-right: 130px;
-			}
-
-			&.banner__content--flip .banner__inner {
-				padding-left: 130px;
-				padding-right: 180px;
-			}
-		}
-
-		@include breakpoint($screen-lg) {
-			&:not(.banner__content--flip) .banner__inner {
-				padding-left: 150px;
-				padding-right: 220px;
-			}
-
-			&.banner__content--flip .banner__inner {
-				padding-left: 220px;
-				padding-right: 150px;
-			}
-
-			&.banner__content--flip .banner__inner {
-				padding-left: 220px;
-				padding-right: 150px;
-			}
+		&.banner__content--flip .banner__inner {
+			padding-left: 30px;
+			padding-right: 130px;
 		}
 	}
+
+	@include breakpoint($screen-md) {
+		&:not(.banner__content--flip) .banner__inner {
+			padding-left: 180px;
+			padding-right: 130px;
+		}
+
+		&.banner__content--flip .banner__inner {
+			padding-left: 130px;
+			padding-right: 180px;
+		}
+	}
+
+	@include breakpoint($screen-lg) {
+		&:not(.banner__content--flip) .banner__inner {
+			padding-left: 150px;
+			padding-right: 220px;
+		}
+
+		&.banner__content--flip .banner__inner {
+			padding-left: 220px;
+			padding-right: 150px;
+		}
+
+		&.banner__content--flip .banner__inner {
+			padding-left: 220px;
+			padding-right: 150px;
+		}
+	}	
 }
 
 .banner__content--byoh .banner__content--background { 
@@ -304,7 +305,9 @@
 .banner__content--twitch {
 	.banner__inner {
 		@include breakpoint($screen-sm) {
-			padding: 0 !important;
+			background: linear-gradient(to right, transparent, rgba(color(mono, black), 0.4), transparent);
+			height: 100%;
+			padding: 20px 0 0 !important;
 			position: absolute;
 			text-shadow: 1px 1px color(mono, black);
 			width: 345px;

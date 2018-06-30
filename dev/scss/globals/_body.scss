@@ -12,7 +12,8 @@ body {
 		to right,
 		rgba(darken(color(primary, darkest), 10), 0.9),
 		rgba(color(primary, darkest), 0.5), 
-		rgba(darken(color(primary, darkest), 10), 0.9));
+		rgba(darken(color(primary, darkest), 10), 0.9)
+	);
 }
 
 body.tingle-enabled {
