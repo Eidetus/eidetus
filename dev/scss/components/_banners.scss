@@ -46,7 +46,7 @@
 	}
 
 	.banner__inner {
-		margin-top: 100px;
+		margin-top: 25vh;
 
 		img {
 			animation: reveal-banner 1s 0.25s ease-in-out;
@@ -63,11 +63,8 @@
 	.banner__overlay--button-container {
 		animation: lower-on-load 0.8s 0.0s ease-in-out;
 		animation-fill-mode: both;
-		bottom: 20vh;
-		left: calc(50% - 100px);
-		position: absolute;
-		transform: translateX(-50%);
-		width: 200px;
+		margin: 20px auto 0;
+		position: relative;
 	}
 
 	.button__icon--container {
@@ -132,28 +129,13 @@
 		min-height: 0px;
 		padding: 55px 0 0;
 
-		.banner__hero--image {
-			display: none;
-		}
-		
-		.banner__hero--video {
-			display: block;
-		}
+		.banner__hero--image { display: none; }
+		.banner__hero--video { display: block; }
 		
 		.banner__inner {
-			margin-top: 10vh;
+			margin-top: 12.5vh;
 
 			img { width: 50vw; }
-		}
-
-		.banner__overlay--button-container {
-			bottom: 10vh;
-		}
-	}
-
-	@include breakpoint($screen-xl) {
-		.banner__overlay--button-container {
-			bottom: 20vh;
 		}
 	}
 }
