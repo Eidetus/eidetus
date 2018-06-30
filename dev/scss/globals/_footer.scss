@@ -7,6 +7,16 @@
 	position: absolute;
 	text-align: center;
 	width: 100%;
+
+	small {
+		font-size: 12px;
+	}
+
+	@include breakpoint($screen-sm) { 
+		small {
+			font-size: 14px;
+		}
+	}
 }
 
 .footer__social-link {
