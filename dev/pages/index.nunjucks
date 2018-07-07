@@ -284,11 +284,11 @@
 	</div>
 
 	<div class="banner__full-width">
-		<div id="story" class="content__container">
+		<div id="story" class="content__container pad-bottom-0">
 
 			<h2 class="text-center text-upper"><strong>A Truly Forgettable Narrative</strong></h2>
 
-			<div class="flex-row">
+			<div class="flex-row marg-bottom-0">
 				<div class="col-md-12">
 					<p>
 						No one remembers how this all started, and that's the problem.
@@ -327,11 +327,11 @@
 					</p>
 				</div>
 
-				{#<div class="col-md-12">
+				<div class="col-md-12">
 					<div class="content__image">
-						<img src="{{ relative_path }}app/img/learn-skills.jpg">
+						<img style="vertical-align: bottom;" src="{{ relative_path }}app/img/story.png">
 					</div>
-				</div>#}
+				</div>
 			</div>
 
 		</div>
