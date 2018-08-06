@@ -68,7 +68,7 @@
 			
 			{{ content.contentBanner(
 				'B.Y.O.H.', 
-				"Design a Pyspher that suits your play style, psychic visions, and team's needs. You do you, boo.", 
+				"Design a Pyspher that suits your play style, psychic visions, and team's needs. You do you.", 
 				false,
 				"byoh",
 				"(Build Your Own Hero)"
@@ -83,7 +83,7 @@
 
 			{{ content.contentBanner(
 				'Deck Building', 
-				"Rock out with your deck out. Devise inventive combinations of skills that dovetail effectively in combat. Since Eidetus is esoteric AF and this game's all about memory, decks are called &quot;reveries&quot; here.", 
+				"Rock out with your deck out. Devise inventive combinations of skills that dovetail effectively in combat. Since Eidetus is esoteric as hell and this game's all about memory, decks are called &quot;reveries&quot; here.", 
 				false,
 				"deck"
 			) }}
@@ -97,7 +97,7 @@
 			
 			{{ content.contentBanner(
 				'Twitch Shooting', 
-				"Give in to that nervous tick and flickshot your way to victory. Quick reaction speeds and precision aim will put you ahead of your Psypher peers. But don't get carpal tunnel. ", 
+				"Flickshot your way to victory. Quick reaction speeds and precision aim will put you ahead of your Psypher peers. But don't get carpal tunnel. ", 
 				false,
 				"twitch"
 			) }}
@@ -307,7 +307,7 @@
 
 				<div class="col-md-12">
 					<p>
-						They can't retain memories, but they can whoop some butt. They have no idea where their keys are, they definitely left the oven on, and they will never, ever find the remote. But best believe they will blow you up with a fireball or rain down some lightning on your punk ass.
+						They can't retain memories, but they can whoop some butt. They have no idea where their keys are, but best believe they will blow you up with a fireball.
 					</p>
 				</div>
 
