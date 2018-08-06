@@ -97,7 +97,7 @@
 			
 			{{ content.contentBanner(
 				'Twitch Shooting', 
-				"Flickshot your way to victory. Quick reaction speeds and precision aim will put you ahead of your Psypher peers. But don't get carpal tunnel. ", 
+				"Flickshot your way to victory. Quick reaction speeds and precision aim will put you ahead of your Psypher peers.", 
 				false,
 				"twitch"
 			) }}
