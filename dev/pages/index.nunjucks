@@ -76,14 +76,14 @@
 			
 			{{ content.contentBanner(
 				'Team-Based Objectives', 
-				"Okay, so there is an &quot;I&quot; in Eidetus, but there's also a &quot;U.&quot; In order to win, you gotta work together with your Psypher pals. You'll need to cooperate and strategize with each other so you can claim your territory.", 
+				"Okay, so there is a \"I\" in Eidetus, but there's also a \"U.\" In order to win, you gotta work together with your Psypher pals. You'll need to cooperate and strategize with each other so you can claim your territory.", 
 				true,
 				"team"
 			) }}
 
 			{{ content.contentBanner(
 				'Deck Building', 
-				"Rock out with your deck out. Devise inventive combinations of skills that dovetail effectively in combat. Since Eidetus is esoteric as hell and this game's all about memory, decks are called &quot;reveries&quot; here.", 
+				"Rock out with your deck out. Devise inventive combinations of skills that dovetail effectively in combat. Since Eidetus is esoteric as hell and this game's all about memory, decks are called \"reveries\" here.", 
 				false,
 				"deck"
 			) }}
@@ -295,7 +295,7 @@
 					</p>
 
 					<p>
-						The mind-altering virus known as &quot;Eidetus&quot; stripped the memories of all who were left on the surface while the elites escaped aboveground to their floating fortress. Thus, crazy powerful (but also crazy absent-minded) Psyphers roam the surface. 
+						The mind-altering virus known as \"Eidetus\" stripped the memories of all who were left on the surface while the elites escaped aboveground to their floating fortress. Thus, crazy powerful (but also crazy absent-minded) Psyphers roam the surface. 
 					</p>
 				</div>
 
