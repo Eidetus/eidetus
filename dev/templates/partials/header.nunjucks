@@ -18,7 +18,7 @@ Global header with page navigation
 		</div>
 		<ul class="nav__menu">
 			{#<li><a href="{{ path }}#media" class="button button__nav--secondary" animate="scroll">Media</a></li>#}
-			<li><a href="{{ path }}#newsletter" class="button button__nav--primary" animate="scroll">Newsletter</a></li>
+			<li><a href="{{ path }}#join" class="button button__nav--primary" animate="scroll">Join Us</a></li>
 			<li><a href="{{ path }}#masteries" animate="scroll">Masteries</a></li>
 			<li><a href="{{ path }}#how-to-play" animate="scroll">How to Play</a></li>
 			<li><a href="{{ path }}#story" animate="scroll">Story</a></li>
