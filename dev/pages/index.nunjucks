@@ -83,7 +83,7 @@
 			
 			{{ content.contentBanner(
 				'B.Y.O.H.', 
-				"Design a Pyspher that suits your play style, psychic visions, and team's needs. You do you.", 
+				"Design a Psypher that suits your play style, psychic visions, and team's needs. You do you.", 
 				false,
 				"byoh",
 				"(Build Your Own Hero)"
